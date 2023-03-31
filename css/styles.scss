@@ -1,19 +1,36 @@
 // COLORS ------------------------------------------
 
-$pirmary: #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
+$purple: #9356DC;
+$pink: #FF79DA;
+$mint: #99E2D0;
+$green:#008766;
+$clear-blue: #89C8FA;
+$marine: #003A68;
 
 // FONTS -------------------------------------------
 
-// font-family: 'Roboto', sans-serif;
-// font-family: 'Shrikhand', cursive;
-
-// $roboto: 'Roboto', sans-serif;
-// $shirkhand: 'Shrikhand', cursive;
-
+$shirkhand: "Shrikhand", cursive;
+$roboto: 'Roboto', sans-serif;
 
 h1 {
     text-align: center;
-    font-family: "Shrikhand", cursive;
+    font-family: $shirkhand;
 }
+
+//                 --------------------------------- TABLET ---------------------------------------
+
+@media only screen and (min-width: 426px) and (max-width: 1024px) {
+    
+}
+
+//                 --------------------------------- TABLET ---------------------------------------
+
+// =================================================================================================================================
+
+//                 --------------------------------- MOBILE ---------------------------------------
+
+@media only screen and (max-width: 425px) {
+    
+}
+
+//                 --------------------------------- MOBILE ---------------------------------------
