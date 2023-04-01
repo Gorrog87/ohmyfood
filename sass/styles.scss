@@ -58,6 +58,31 @@ button {
   padding: 0.4rem;
 }
 
+.liked {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+// .fa-heart{
+//   color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+//   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+// }
+
+// .fa-regular {
+//   color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+// }
+
+// .fa-heart {
+//   color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+// }
+
+// i {
+//   color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+//   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+//   fill: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+// }
+
+
+
 //                 --------------------------------- TABLET ---------------------------------------
 
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
