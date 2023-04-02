@@ -1,6 +1,5 @@
 // to watch the changes --> cli : sass --watch sass/styles.scss sass/styles.css
 
-
 // COLORS ------------------------------------------
 
 $purple: #9356dc;
@@ -58,29 +57,37 @@ button {
   padding: 0.4rem;
 }
 
-.liked {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+span {
+  position: relative;
 }
 
-// .fa-heart{
-//   color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-//   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-// }
+.fa-regular {
+  cursor: pointer;
+  position: absolute;
+  transition: transform 0.3s;
+  transform-origin: bottom;
+  &:hover {
+    transform: scaleY(1);
+    transition: transform 0.2s;
+    transform-origin: bottom;
+  }
+  &:hover + .fa-solid {
+    transform: scaleY(1);
+  }
+}
 
-// .fa-regular {
-//   color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-// }
-
-// .fa-heart {
-//   color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-// }
-
-// i {
-//   color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-//   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-//   fill: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-// }
-
+.fa-solid {
+  cursor: pointer;
+  position: absolute;
+  transition: transform 0.3s;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
 
 
 //                 --------------------------------- TABLET ---------------------------------------
