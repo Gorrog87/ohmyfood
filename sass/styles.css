@@ -7,16 +7,47 @@ button {
   all: unset;
 }
 
-.explore-btn {
+.shirkhand {
+  font-family: "Shrikhand", cursive;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.primary-btn {
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   color: #ffffff;
   padding: 1rem;
+  width: fit-content;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
 }
-.explore-btn:hover {
+.primary-btn:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
@@ -43,22 +74,20 @@ span {
 .fa-regular {
   cursor: pointer;
   position: absolute;
-  transition: transform 0.3s;
   transform-origin: bottom;
 }
 .fa-regular:hover {
   transform: scaleY(1);
-  transition: transform 0.2s;
   transform-origin: bottom;
 }
 .fa-regular:hover + .fa-solid {
   transform: scaleY(1);
 }
 
-.fa-solid {
+.fa-heart {
   cursor: pointer;
   position: absolute;
-  transition: transform 0.3s;
+  transition: transform 0.1s;
   transform: scaleY(0);
   transform-origin: bottom;
   background: linear-gradient(#9356dc, #ff79da);
@@ -66,6 +95,26 @@ span {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  -webkit-transition: transform 0.1s;
+  -moz-transition: transform 0.1s;
+  -ms-transition: transform 0.1s;
+  -o-transition: transform 0.1s;
+}
+
+.location {
+  background-color: #eaeaea;
+  font-family: "Roboto", sans-serif;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    margin: unset;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

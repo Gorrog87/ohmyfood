@@ -14,21 +14,53 @@ $marine: #003a68;
 $shirkhand: "Shrikhand", cursive;
 $roboto: "Roboto", sans-serif;
 
+// -----------------------------------------------------------------------------------------------------------------------------------
+
 h1 {
   text-align: center;
   font-family: $shirkhand;
 }
-
 button {
   all: unset;
 }
 
-.explore-btn {
+.shirkhand {
+  font-family: $shirkhand;
+}
+
+.roboto {
+  font-family: $roboto;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fs-24{
+  font-size: 24px;
+}
+
+.primary-btn {
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   color: #ffffff;
   padding: 1rem;
+  width: fit-content;
   font-family: $roboto;
   cursor: pointer;
   &:hover {
@@ -57,6 +89,10 @@ button {
   padding: 0.4rem;
 }
 
+// heart logo, till have an animation issue
+// class="fa-stack" peut etre la réponse à mon problème de fond qui ne s'affiche pas à l'intérieur de l'icone
+// ATTENTION, A L'APPEL DU COEUR IL EST IMPERATIF DE METTRE LES DEUX LOGOS DANS UNE SPAN
+
 span {
   position: relative;
 }
@@ -64,11 +100,11 @@ span {
 .fa-regular {
   cursor: pointer;
   position: absolute;
-  transition: transform 0.3s;
+  // transition: transform 0.3s;
   transform-origin: bottom;
   &:hover {
     transform: scaleY(1);
-    transition: transform 0.2s;
+    // transition: transform 0.2s;
     transform-origin: bottom;
   }
   &:hover + .fa-solid {
@@ -76,10 +112,10 @@ span {
   }
 }
 
-.fa-solid {
+.fa-heart {
   cursor: pointer;
   position: absolute;
-  transition: transform 0.3s;
+  transition: transform 0.1s;
   transform: scaleY(0);
   transform-origin: bottom;
   background: linear-gradient(#9356dc, #ff79da);
@@ -87,8 +123,23 @@ span {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  -webkit-transition: transform 0.1s;
+  -moz-transition: transform 0.1s;
+  -ms-transition: transform 0.1s;
+  -o-transition: transform 0.1s;
 }
 
+// heart logo, till have an animation issue
+
+.location {
+  background-color: #eaeaea;
+  font-family: $roboto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 
 //                 --------------------------------- TABLET ---------------------------------------
 
@@ -102,6 +153,9 @@ span {
 //                 --------------------------------- MOBILE ---------------------------------------
 
 @media only screen and (max-width: 425px) {
+  body {
+    margin: unset;
+  }
 }
 
 //                 --------------------------------- MOBILE ---------------------------------------
