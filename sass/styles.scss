@@ -9,6 +9,7 @@ $green: #008766;
 $clear-blue: #89c8fa;
 $marine: #003a68;
 $grey: #7e7e7e;
+$light-grey: #f6f6f6;
 
 // FONTS -------------------------------------------
 
@@ -21,9 +22,20 @@ h1 {
   text-align: center;
   font-family: $shirkhand;
 }
+
+nav {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  padding: 0.7rem 0;
+  position: relative;
+  h1 {
+    margin: unset;
+  }
+}
+
 button {
   all: unset;
 }
+
 a {
   all: unset;
   cursor: pointer;
@@ -49,6 +61,10 @@ a {
   color: $grey;
 }
 
+.light-grey {
+  background: $light-grey;
+}
+
 .purple {
   color: $purple;
 }
@@ -66,6 +82,12 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .text-center {
@@ -113,10 +135,13 @@ a {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 16px;
   text-align: center;
-  padding: 0.4rem;
+  padding: 0.4rem 0.5rem;
+  position: absolute;
+  top: 0px;
+  right: 10px;
 }
 
 // heart logo, till have an animation issue
@@ -125,39 +150,47 @@ a {
 
 span {
   position: relative;
-}
-
-.fa-regular {
-  cursor: pointer;
-  position: absolute;
-  // transition: transform 0.3s;
-  transform-origin: bottom;
-  &:hover {
-    transform: scaleY(1);
-    // transition: transform 0.2s;
-    transform-origin: bottom;
+  .fa-regular .fa-heart {
+    position: absolute;
   }
-  &:hover + .fa-solid {
-    transform: scaleY(1);
+
+  .fa-solid > .fa-heart {
+    position: absolute;
+    display: none;
   }
 }
 
-.fa-heart {
-  cursor: pointer;
-  position: absolute;
-  transition: transform 0.1s;
-  transform: scaleY(0);
-  transform-origin: bottom;
-  background: linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  -webkit-transition: transform 0.1s;
-  -moz-transition: transform 0.1s;
-  -ms-transition: transform 0.1s;
-  -o-transition: transform 0.1s;
-}
+// .fa-regular {
+//   cursor: pointer;
+//   position: absolute;
+//   // transition: transform 0.3s;
+//   transform-origin: bottom;
+//   &:hover {
+//     transform: scaleY(1);
+//     // transition: transform 0.2s;
+//     transform-origin: bottom;
+//   }
+//   &:hover + .fa-solid {
+//     transform: scaleY(1);
+//   }
+// }
+
+// .fa-heart {
+//   cursor: pointer;
+//   position: absolute;
+//   transition: transform 0.1s;
+//   transform: scaleY(0);
+//   transform-origin: bottom;
+//   background: linear-gradient(#9356dc, #ff79da);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   -moz-background-clip: text;
+//   -moz-text-fill-color: transparent;
+//   -webkit-transition: transform 0.1s;
+//   -moz-transition: transform 0.1s;
+//   -ms-transition: transform 0.1s;
+//   -o-transition: transform 0.1s;
+// }
 
 // heart logo, till have an animation issue
 
@@ -175,6 +208,40 @@ span {
 @media only screen and (max-width: 425px) {
   body {
     margin: unset;
+  }
+
+  main {
+    padding: 1rem;
+    background-color: $light-grey;
+    h2 {
+      padding-top: 1.5rem;
+    }
+  }
+
+  img {
+    max-width: 288px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  article {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+    .restaurant-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .restaurant-location {
+      font-weight: 200;
+      margin-top: unset;
+    }
+    p{
+      padding-left: 0.5rem;
+    }
+    .fa-heart{
+      padding-right: 0.5rem;
+    }
   }
 
   .location {
@@ -207,8 +274,8 @@ span {
     left: -10px;
   }
 
-  .fonctionnement {
-    padding: 0 1.5rem;
+  .sections {
+    padding: 0 1.5rem 1.5rem;
   }
 
   .fs-24 {
@@ -216,7 +283,7 @@ span {
     padding-top: 1.5rem;
   }
 
-  .reservez {
+  .reservez-section {
     padding-bottom: 2rem;
   }
 }
