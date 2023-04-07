@@ -22,7 +22,7 @@ $roboto: "Roboto", sans-serif;
 // -----------------------------------------------------------------------------------------------------------------------------------
 
 h1 {
-  text-align: center;
+  text-align: center!important;
   font-family: $shirkhand;
 }
 
@@ -167,8 +167,8 @@ footer {
   right: 10px;
 }
 
-// .arrow {
-
+// .fa-arrow {
+//  justify-self: flex-start!important;
 // }
 
 // heart logo, till have an animation issue
