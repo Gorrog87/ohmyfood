@@ -23,7 +23,6 @@ a {
 
 footer {
   background-color: #353535;
-  padding: 0.5rem;
   color: #ffffff;
 }
 
@@ -132,15 +131,29 @@ footer {
   right: 10px;
 }
 
-span {
-  position: relative;
-}
-span .fa-regular .fa-heart {
+#empty-heart {
   position: absolute;
+  right: 0;
+  transition: all 450ms;
 }
-span .fa-solid .fa-heart {
-  position: absolute;
+#empty-heart:hover {
   display: none;
+}
+#empty-heart:hover + #full-heart {
+  display: block;
+  transform: scale(1);
+  color: linear-gradient(#9356dc, #ff79da);
+}
+
+#full-heart {
+  position: absolute;
+  right: 0;
+  display: none;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
 }
 
 @media only screen and (max-width: 425px) {
@@ -156,6 +169,9 @@ span .fa-solid .fa-heart {
   }
   img {
     max-width: 288px;
+    max-height: 192px;
+    min-width: 288px;
+    object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
   footer {
@@ -174,6 +190,7 @@ span .fa-solid .fa-heart {
   }
   article {
     background-color: #ffffff;
+    margin: 1rem 0;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     position: relative;

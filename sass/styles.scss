@@ -12,6 +12,7 @@ $grey: #7e7e7e;
 $light-grey: #f6f6f6;
 $dark-grey: #353535;
 $white: #ffffff;
+$heart: linear-gradient(#9356dc, #ff79da);
 
 // FONTS -------------------------------------------
 
@@ -163,50 +164,70 @@ footer {
 // class="fa-stack" peut etre la réponse à mon problème de fond qui ne s'affiche pas à l'intérieur de l'icone
 // ATTENTION, A L'APPEL DU COEUR IL EST IMPERATIF DE METTRE LES DEUX LOGOS DANS UNE SPAN
 
-span {
-  position: relative;
-  .fa-regular .fa-heart {
-    position: absolute;
-  }
+// span {
+//   position: relative;
+//   .fa-regular .fa-heart {
+//     position: absolute;
+//   }
 
-  .fa-solid .fa-heart {
-    position: absolute;
-    display: none;
-  }
-}
+//   .fa-solid .fa-heart {
+//     position: absolute;
+//     display: none;
+//   }
+// }
 
 // .fa-regular {
 //   cursor: pointer;
 //   position: absolute;
+//   right: 0;
 //   // transition: transform 0.3s;
 //   transform-origin: bottom;
 //   &:hover {
-//     transform: scaleY(1);
-//     // transition: transform 0.2s;
-//     transform-origin: bottom;
+//     display: none;
 //   }
 //   &:hover + .fa-solid {
 //     transform: scaleY(1);
+//     transform-origin: bottom;
+//     transition: transform 0.2s;
 //   }
 // }
 
 // .fa-heart {
 //   cursor: pointer;
 //   position: absolute;
+//   right: 0;
 //   transition: transform 0.1s;
-//   transform: scaleY(0);
-//   transform-origin: bottom;
+//   transform: scaleY(1);
 //   background: linear-gradient(#9356dc, #ff79da);
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   -moz-background-clip: text;
-//   -moz-text-fill-color: transparent;
-//   -webkit-transition: transform 0.1s;
-//   -moz-transition: transform 0.1s;
-//   -ms-transition: transform 0.1s;
-//   -o-transition: transform 0.1s;
+//
 // }
 
+#empty-heart{
+position: absolute;
+right: 0;
+transition: all 450ms;
+&:hover{
+  display: none;
+}
+&:hover + #full-heart {
+  display: block;
+  // transition: transform 0.3s;
+  transform: scale(1);
+  color: $heart;
+}
+}
+
+#full-heart{
+    position: absolute;
+    right: 0;
+    display: none;
+    transform: scale(0);
+    // color: linear-gradient(#9356dc, #ff79da);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
 // heart logo, till have an animation issue
 
 //                 --------------------------------- TABLET ---------------------------------------
@@ -235,6 +256,9 @@ span {
 
   img {
     max-width: 288px;
+    max-height: 192px;
+    min-width: 288px;
+    object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
 
@@ -255,6 +279,7 @@ span {
 
   article {
     background-color: #ffffff;
+    margin: 1rem 0;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     position: relative;
