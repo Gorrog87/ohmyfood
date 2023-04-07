@@ -12,6 +12,12 @@ nav h1 {
   margin: unset;
 }
 
+.arrow {
+  position: absolute;
+  left: 5%;
+  top: 35%;
+}
+
 button {
   all: unset;
 }
@@ -168,11 +174,11 @@ footer {
   body {
     margin: unset;
   }
-  main {
+  .main-index {
     padding: 1rem;
     background-color: #f6f6f6;
   }
-  main h2 {
+  .main-index h2 {
     padding-top: 1.5rem;
   }
   .img-index {

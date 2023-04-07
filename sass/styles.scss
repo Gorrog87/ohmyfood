@@ -35,6 +35,12 @@ nav {
   }
 }
 
+.arrow {
+  position: absolute;
+  left: 5%;
+  top: 35%;
+}
+
 button {
   all: unset;
 }
@@ -167,10 +173,6 @@ footer {
   right: 10px;
 }
 
-// .fa-arrow {
-//  justify-self: flex-start!important;
-// }
-
 // heart logo, till have an animation issue
 // class="fa-stack" peut etre la réponse à mon problème de fond qui ne s'affiche pas à l'intérieur de l'icone
 // ATTENTION, A L'APPEL DU COEUR IL EST IMPERATIF DE METTRE LES DEUX LOGOS DANS UNE SPAN
@@ -257,7 +259,11 @@ footer {
     margin: unset;
   }
 
-  main {
+  .main-page {
+
+  }
+
+  .main-index {
     padding: 1rem;
     background-color: $light-grey;
     h2 {
