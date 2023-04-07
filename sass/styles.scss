@@ -110,6 +110,13 @@ footer {
   text-align: center;
 }
 
+.ml-1 {
+  margin-left: 1rem;
+}
+.gap-4 {
+  gap: 4rem;
+}
+
 .fs-24 {
   font-size: 24px;
 }
@@ -160,6 +167,10 @@ footer {
   right: 10px;
 }
 
+// .arrow {
+
+// }
+
 // heart logo, till have an animation issue
 // class="fa-stack" peut etre la réponse à mon problème de fond qui ne s'affiche pas à l'intérieur de l'icone
 // ATTENTION, A L'APPEL DU COEUR IL EST IMPERATIF DE METTRE LES DEUX LOGOS DANS UNE SPAN
@@ -202,31 +213,31 @@ footer {
 //
 // }
 
-#empty-heart{
-position: absolute;
-right: 0;
-transition: all 450ms;
-&:hover{
-  display: none;
-}
-&:hover + #full-heart {
-  display: block;
-  // transition: transform 0.3s;
-  transform: scale(1);
-  color: $heart;
-}
+#empty-heart {
+  position: absolute;
+  right: 0;
+  transition: all 450ms;
+  &:hover {
+    display: none;
+  }
+  &:hover + #full-heart {
+    display: block;
+    // transition: transform 0.3s;
+    transform: scale(1);
+    color: $heart;
+  }
 }
 
-#full-heart{
-    position: absolute;
-    right: 0;
-    display: none;
-    transform: scale(0);
-    // color: linear-gradient(#9356dc, #ff79da);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
+#full-heart {
+  position: absolute;
+  right: 0;
+  display: none;
+  transform: scale(0);
+  // color: linear-gradient(#9356dc, #ff79da);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
 }
 // heart logo, till have an animation issue
 
@@ -254,12 +265,17 @@ transition: all 450ms;
     }
   }
 
-  img {
-    max-width: 288px;
+  .img-index {
     max-height: 192px;
-    min-width: 288px;
+    min-width: -webkit-fill-available;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
+  }
+
+  .img-page {
+    width: -webkit-fill-available;
+    object-fit: cover;
+    height: 275px;
   }
 
   footer {
