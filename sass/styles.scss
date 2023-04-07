@@ -21,6 +21,7 @@ $roboto: "Roboto", sans-serif;
 
 // -----------------------------------------------------------------------------------------------------------------------------------
 
+
 h1 {
   // text-align: center!important;
   font-family: $shirkhand;
@@ -262,9 +263,9 @@ footer {
   .main-page {
     background-color: $light-grey;
     border-radius: 40px 40px 0 0;
-    position: absolute;
     width: -webkit-fill-available;
-    bottom: -32%;
+    position: relative;
+    top: -2.6rem;
     padding: 1rem;
     h1 {
       margin: unset;
