@@ -22,7 +22,7 @@ $roboto: "Roboto", sans-serif;
 // -----------------------------------------------------------------------------------------------------------------------------------
 
 h1 {
-  text-align: center!important;
+  // text-align: center!important;
   font-family: $shirkhand;
 }
 
@@ -32,6 +32,7 @@ nav {
   position: relative;
   h1 {
     margin: unset;
+    text-align: center;
   }
 }
 
@@ -52,7 +53,6 @@ a {
 
 footer {
   background-color: $dark-grey;
-  // padding: 0.5rem;
   color: $white;
 }
 
@@ -260,12 +260,25 @@ footer {
   }
 
   .main-page {
-
+    background-color: $light-grey;
+    border-radius: 40px 40px 0 0;
+    position: absolute;
+    width: -webkit-fill-available;
+    bottom: -32%;
+    padding: 1rem;
+    h1 {
+      margin: unset;
+      font-size: 1.55rem;
+    }
+    #empty-heart {
+      position: unset;
+    }
   }
 
   .main-index {
     padding: 1rem;
     background-color: $light-grey;
+    
     h2 {
       padding-top: 1.5rem;
     }
@@ -282,6 +295,7 @@ footer {
     width: -webkit-fill-available;
     object-fit: cover;
     height: 275px;
+    position: relative;
   }
 
   footer {
