@@ -194,6 +194,9 @@ footer {
   .main-page #empty-heart {
     position: unset;
   }
+  .main-page .primary-btn {
+    margin-top: 15%;
+  }
   .main-index {
     padding: 1rem;
     background-color: #f6f6f6;
