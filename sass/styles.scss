@@ -34,6 +34,7 @@ nav {
   h1 {
     margin: unset;
     text-align: center;
+    font-size: 8vw;
   }
 }
 
@@ -124,12 +125,17 @@ footer {
   gap: 4rem;
 }
 
-.fs-24 {
-  font-size: 24px;
-}
 
 .gap-1 {
   gap: 1rem;
+}
+
+.fs-16 {
+  font-size: 1rem;
+}
+
+.fs-24 {
+  font-size: 24px;
 }
 
 .reservez {
@@ -244,6 +250,8 @@ footer {
 }
 // heart logo, till have an animation issue
 
+
+
 //                 --------------------------------- TABLET ---------------------------------------
 
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
@@ -269,7 +277,7 @@ footer {
     padding: 1rem;
     h1 {
       margin: unset;
-      font-size: 1.55rem;
+      font-size: 6vw;
     }
     #empty-heart {
       position: unset;
@@ -299,15 +307,34 @@ footer {
     position: relative;
   }
 
+  .dish-title {
+    border-bottom: 3px solid $mint;
+    width: 14%;
+  }
+  
+  .dish {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    margin-top: 0.8rem;
+    p {
+      margin: 0.2rem;
+      font-size: 4vw;
+    }
+  }
+
   footer {
     background-color: $dark-grey;
     padding: 0.5rem 1rem;
     color: $white;
     h4 {
       margin-top: 1rem;
+      font-size: 5vw;
     }
     p {
       margin: 0.4rem 0rem;
+      font-size: 5vw;
     }
     #contact {
       margin-top: 0.9rem;

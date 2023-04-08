@@ -10,6 +10,7 @@ nav {
 nav h1 {
   margin: unset;
   text-align: center;
+  font-size: 8vw;
 }
 
 .arrow {
@@ -100,12 +101,16 @@ footer {
   gap: 4rem;
 }
 
-.fs-24 {
-  font-size: 24px;
-}
-
 .gap-1 {
   gap: 1rem;
+}
+
+.fs-16 {
+  font-size: 1rem;
+}
+
+.fs-24 {
+  font-size: 24px;
 }
 
 .reservez {
@@ -184,7 +189,7 @@ footer {
   }
   .main-page h1 {
     margin: unset;
-    font-size: 1.55rem;
+    font-size: 6vw;
   }
   .main-page #empty-heart {
     position: unset;
@@ -208,6 +213,21 @@ footer {
     height: 275px;
     position: relative;
   }
+  .dish-title {
+    border-bottom: 3px solid #99e2d0;
+    width: 14%;
+  }
+  .dish {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    margin-top: 0.8rem;
+  }
+  .dish p {
+    margin: 0.2rem;
+    font-size: 4vw;
+  }
   footer {
     background-color: #353535;
     padding: 0.5rem 1rem;
@@ -215,9 +235,11 @@ footer {
   }
   footer h4 {
     margin-top: 1rem;
+    font-size: 5vw;
   }
   footer p {
     margin: 0.4rem 0rem;
+    font-size: 5vw;
   }
   footer #contact {
     margin-top: 0.9rem;
