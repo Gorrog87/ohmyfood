@@ -341,8 +341,8 @@ footer {
     opacity: 0;
   }
   .heart #empty-heart {
-    line-height: 1;
     position: absolute;
+    line-height: 1;
     opacity: 1;
     transition: opacity 0.1s;
   }
@@ -361,14 +361,45 @@ footer {
     -ms-transition: all 0.25s;
     -o-transition: all 0.25s;
   }
-  .heart .heart-card {
+  .heart-card {
+    z-index: 1;
     position: relative;
+    right: 30px;
+    bottom: 5px;
   }
-  .heart #empty-heart-card {
-    position: absolute;
+  .heart-card:hover #full-heart-card {
+    opacity: 1;
+    transform: scale(1);
+    background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1;
   }
-  .heart #full-heart-card {
+  .heart-card:hover #empty-heart-card {
+    opacity: 0;
+  }
+  .heart-card #empty-heart-card {
     position: absolute;
+    line-height: 1;
+    opacity: 1;
+    transition: opacity 0.1s;
+  }
+  .heart-card #full-heart-card {
+    position: absolute;
+    opacity: 0;
+    line-height: 1;
+    transition: all 0.25s;
+    transform: scale(0.2);
+    color: transparent;
+    background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: absolute;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
   }
 }
 
