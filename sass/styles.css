@@ -154,31 +154,6 @@ footer {
   right: 10px;
 }
 
-#empty-heart {
-  position: absolute;
-  right: 0;
-  transition: all 450ms;
-}
-#empty-heart:hover {
-  display: none;
-}
-#empty-heart:hover + #full-heart {
-  display: block;
-  transform: scale(1);
-  color: linear-gradient(#9356dc, #ff79da);
-}
-
-#full-heart {
-  position: absolute;
-  right: 0;
-  display: none;
-  transform: scale(0);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-}
-
 @media only screen and (max-width: 425px) {
   body {
     margin: unset;
@@ -194,9 +169,6 @@ footer {
   .main-page h1 {
     margin: unset;
     font-size: 6vw;
-  }
-  .main-page #empty-heart {
-    position: unset;
   }
   .main-page .primary-btn {
     margin-top: 15%;
@@ -247,9 +219,6 @@ footer {
     border-radius: 15px 0 0 15px;
     width: 80%;
   }
-  .dish:active + .check-container {
-    display: flex;
-  }
   .dish p {
     margin: 0.2rem;
     font-size: 4vw;
@@ -257,13 +226,13 @@ footer {
   .check-container {
     background: #99e2d0;
     width: 17%;
-    display: none;
     border-radius: 0 15px 15px 0;
     margin-top: 0.8rem;
     transform-origin: left;
     transform: scaleX(0);
     transition-property: transform;
     transition-duration: 350ms;
+    transition: transform 350ms ease;
   }
   .check {
     border-radius: 50%;
@@ -307,9 +276,6 @@ footer {
   article p {
     padding-left: 0.5rem;
   }
-  article .fa-heart {
-    padding-right: 0.5rem;
-  }
   .location {
     background-color: #eaeaea;
     font-family: "Roboto", sans-serif;
@@ -326,6 +292,15 @@ footer {
     max-height: 72.38px;
     position: relative;
     margin-bottom: 1.5rem;
+  }
+  .functioning-step:hover .fa-mobile-screen {
+    color: #9356dc;
+  }
+  .functioning-step:hover .fa-list-ul {
+    color: #9356dc;
+  }
+  .functioning-step:hover .fa-store {
+    color: #9356dc;
   }
   .number {
     background-color: #9356dc;
@@ -346,6 +321,54 @@ footer {
   }
   .reservez-section {
     padding-bottom: 2rem;
+  }
+  .heart {
+    cursor: pointer;
+    position: relative;
+    top: -10px;
+    right: 25px;
+  }
+  .heart:hover #full-heart {
+    opacity: 1;
+    transform: scale(1);
+    background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1;
+  }
+  .heart:hover #empty-heart {
+    opacity: 0;
+  }
+  .heart #empty-heart {
+    line-height: 1;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.1s;
+  }
+  .heart #full-heart {
+    opacity: 0;
+    line-height: 1;
+    transition: all 0.25s;
+    transform: scale(0.2);
+    color: transparent;
+    background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: absolute;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .heart .heart-card {
+    position: relative;
+  }
+  .heart #empty-heart-card {
+    position: absolute;
+  }
+  .heart #full-heart-card {
+    position: absolute;
   }
 }
 
