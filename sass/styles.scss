@@ -22,7 +22,6 @@ $roboto: "Roboto", sans-serif;
 // -----------------------------------------------------------------------------------------------------------------------------------
 
 h1 {
-  // text-align: center!important;
   font-family: $shirkhand;
 }
 
@@ -182,48 +181,6 @@ footer {
   right: 10px;
 }
 
-// heart logo, till have an animation issue
-// class="fa-stack" peut etre la réponse à mon problème de fond qui ne s'affiche pas à l'intérieur de l'icone
-// ATTENTION, A L'APPEL DU COEUR IL EST IMPERATIF DE METTRE LES DEUX LOGOS DANS UNE SPAN
-
-// span {
-//   position: relative;
-//   .fa-regular .fa-heart {
-//     position: absolute;
-//   }
-
-//   .fa-solid .fa-heart {
-//     position: absolute;
-//     display: none;
-//   }
-// }
-
-// .fa-regular {
-//   cursor: pointer;
-//   position: absolute;
-//   right: 0;
-//   // transition: transform 0.3s;
-//   transform-origin: bottom;
-//   &:hover {
-//     display: none;
-//   }
-//   &:hover + .fa-solid {
-//     transform: scaleY(1);
-//     transform-origin: bottom;
-//     transition: transform 0.2s;
-//   }
-// }
-
-// .fa-heart {
-//   cursor: pointer;
-//   position: absolute;
-//   right: 0;
-//   transition: transform 0.1s;
-//   transform: scaleY(1);
-//   background: linear-gradient(#9356dc, #ff79da);
-//
-// }
-
 //                 --------------------------------- TABLET ---------------------------------------
 
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
@@ -251,9 +208,6 @@ footer {
       margin: unset;
       font-size: 6vw;
     }
-    // #empty-heart {
-    //   position: unset;
-    // }
     .primary-btn {
       margin-top: 15%;
     }
@@ -308,17 +262,17 @@ footer {
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
     margin-top: 0.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: width 0.3s;
     &:active {
       border-radius: 15px 0 0 15px;
-      width: 80%;
+      //rajouté
+      transition: width 0.3s;
+      // rajouté
     }
     &:active + .check-container {
-      // display: flex;
-      // transform: scaleX(1);
-      // -webkit-transform: scaleX(1);
-      // -moz-transform: scaleX(1);
-      // -ms-transform: scaleX(1);
-      // -o-transform: scaleX(1);
+      
     }
     p {
       margin: 0.2rem;
@@ -327,16 +281,16 @@ footer {
   }
 
   .check-container {
-    background: #99e2d0;
+    background: $mint;
+    position: absolute;
+    display: none;
     width: 17%;
-    // display: none;
+    height: 100%;
     border-radius: 0 15px 15px 0;
     margin-top: 0.8rem;
-    transform-origin: left;
-    transform: scaleX(0);
-    transition-property: transform;
-    transition-duration: 350ms;
-    transition: transform 350ms ease;
+    // rajouté
+    transition: right 1s ease-in-out;
+    // rajouté
   }
   .check {
     border-radius: 50%;
@@ -437,7 +391,7 @@ footer {
     padding-bottom: 2rem;
   }
 
-  // Animations
+  // Animations ------------------------------------------------------------------
 
   .heart {
     cursor: pointer;
@@ -539,7 +493,7 @@ footer {
     }
   }
 
-  // Animations
+  // Animations ----------------------------------------------------------------------------------
 }
 
 //                 --------------------------------- MOBILE ---------------------------------------

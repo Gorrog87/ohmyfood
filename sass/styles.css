@@ -214,10 +214,13 @@ footer {
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
     margin-top: 0.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: width 0.3s;
   }
   .dish:active {
     border-radius: 15px 0 0 15px;
-    width: 80%;
+    transition: width 0.3s;
   }
   .dish p {
     margin: 0.2rem;
@@ -225,14 +228,13 @@ footer {
   }
   .check-container {
     background: #99e2d0;
+    position: absolute;
+    display: none;
     width: 17%;
+    height: 100%;
     border-radius: 0 15px 15px 0;
     margin-top: 0.8rem;
-    transform-origin: left;
-    transform: scaleX(0);
-    transition-property: transform;
-    transition-duration: 350ms;
-    transition: transform 350ms ease;
+    transition: right 1s ease-in-out;
   }
   .check {
     border-radius: 50%;
