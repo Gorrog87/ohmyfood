@@ -21,6 +21,34 @@ $roboto: "Roboto", sans-serif;
 
 // -----------------------------------------------------------------------------------------------------------------------------------
 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: gif-loader 4s !important;
+  animation-fill-mode: forwards;
+  -webkit-animation: gif-loader 4s !important;
+}
+
+@keyframes gif-loader {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.loader {
+  width: 250px;
+  height: 200px;
+}
+
 h1 {
   font-family: $shirkhand;
 }
@@ -271,9 +299,9 @@ footer {
       transition: width 0.3s;
       // rajouté
     }
-    &:active + .check-container {
-      
-    }
+    // &:active + .check-container {
+
+    // }
     p {
       margin: 0.2rem;
       font-size: 4vw;
