@@ -255,8 +255,6 @@ footer {
   }
   .check-container {
     background: #99e2d0;
-    position: absolute;
-    display: none;
     width: 17%;
     height: 100%;
     border-radius: 0 15px 15px 0;
@@ -378,17 +376,17 @@ footer {
   .heart #full-heart {
     opacity: 0;
     line-height: 1;
-    transition: all 0.25s;
+    transition: all 0.45s;
     transform: scale(0.2);
     color: transparent;
     background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
     background-clip: text;
     -webkit-background-clip: text;
     position: absolute;
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -ms-transition: all 0.25s;
-    -o-transition: all 0.25s;
+    -webkit-transition: all 0.45s;
+    -moz-transition: all 0.45s;
+    -ms-transition: all 0.45s;
+    -o-transition: all 0.45s;
   }
   .heart-card {
     z-index: 1;
