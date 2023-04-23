@@ -23,54 +23,8 @@ $roboto: "Roboto", sans-serif;
 
 // -----------------------------------------------------------------------------------------------------------------------------------
 
-// .loader {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-//   animation: gif-loader 4s !important;
-//   animation-fill-mode: forwards;
-//   -webkit-animation: gif-loader 4s !important;
-// }
 
-// @keyframes gif-loader {
-//   0% {
-//     opacity: 1;
-//   }
-//   99% {
-//     z-index: 1;
-//   }
-//   100% {
-//     opacity: 0;
-//     z-index: -1;
-//   }
-// }
-
-// .loader {
-//   width: 250px;
-//   height: 200px;
-// }
-
-h1 {
-  font-family: $shirkhand;
-}
-
-nav {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  padding: 0.7rem 0;
-  position: relative;
-  h1 {
-    margin: unset;
-    text-align: center;
-    font-size: 8vw;
-  }
-}
-
-.arrow {
-  position: absolute;
-  left: 5%;
-  top: 35%;
-}
+//   -------------------------------------------------------- LIBRARY ----------------------------------------------------------------
 
 button {
   all: unset;
@@ -79,11 +33,6 @@ button {
 a {
   all: unset;
   cursor: pointer;
-}
-
-footer {
-  background-color: $dark-grey;
-  color: $white;
 }
 
 .shirkhand {
@@ -174,50 +123,168 @@ footer {
   font-size: 24px;
 }
 
-.restaurant-name {
-  font-size: 8vw;
+// --------------------------------------------------------------- LIBRARY ------------------------------------------------------------
+
+body {
+  margin: unset;
+  background: $light-grey;
 }
 
-.reservez {
-  background-color: #f6f6f6;
+h1 {
+  font-family: $shirkhand;
 }
 
-.primary-btn {
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  color: #ffffff;
-  padding: 1rem;
-  width: fit-content;
-  font-family: $roboto;
-  cursor: pointer;
-  &:hover {
-    background: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.15),
-        rgba(255, 255, 255, 0.15)
-      ),
-      linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+
+
+//                 --------------------------------- LARGE DESKTOP --------------------------------
+
+@media only screen and (min-width: 1025px) and (max-width: 2560px) {
+
+  nav {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 0.7rem 0;
+    position: relative;
+    background: $white;
+    h1 {
+      margin: unset;
+      text-align: center;
+      font-size: 6vw;
+    }
   }
-}
 
-.new {
-  font-family: $roboto;
-  color: $green;
-  background: #99e2d0;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 2px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  padding: 0.4rem 0.5rem;
-  position: absolute;
-  top: 0px;
-  right: 10px;
+  main {
+    h2 {
+      padding-left: 1rem;
+      margin: 3rem 0;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    left: 5%;
+    top: 41%;
+    font-size: 1.5vw;
+  }
+
+  .location {
+    background-color: $location-grey;
+    font-family: $roboto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .reservez-section {
+    background: $light-grey;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    p {
+      margin-top: 3rem;
+    }
+  }
+
+  .functioning {
+    padding: 3rem 0;
+    background: $white;
+    h2 {
+      padding-left: 1rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  footer {
+    background-color: $dark-grey;
+    color: $white;
+  }
+
+  .restaurant-name {
+    font-size: 8vw;
+  }
+
+  .reservez {
+    background-color: #f6f6f6;
+  }
+
+  .functioning-steps {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .functioning-step {
+    background-color: #f6f6f6;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    //max-width: 322.49px;
+    max-width: 100%;
+    max-height: 72.38px;
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 27%;
+    //attentionacettelargeurquipeutrégirlesautresproportionsdanslesmediaqueries&:hover ;
+    &:hover {
+      .fa-mobile-screen {
+        color: $purple;
+      }
+      .fa-list-ul {
+        color: $purple;
+      }
+      .fa-store {
+        color: $purple;
+      }
+    }
+  }
+
+  .number {
+    background-color: $purple;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+  }
+
+  .primary-btn {
+    background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    color: #ffffff;
+    padding: 1rem;
+    width: fit-content;
+    font-family: $roboto;
+    cursor: pointer;
+    &:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.15)
+        ),
+        linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  .new {
+    font-family: $roboto;
+    color: $green;
+    background: #99e2d0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    padding: 0.4rem 0.5rem;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+  }
 }
 
 //                 --------------------------------- TABLET ---------------------------------------
@@ -227,11 +294,14 @@ footer {
     margin: unset;
     background: #f6f6f6f6;
   }
-
+  
   main {
     margin: 4rem 1rem 1rem 1rem;
+    h2 {
+      padding-left: unset;
+    }
   }
-
+  
   h2 {
     text-align: center;
     margin: 3rem 0;
@@ -257,6 +327,16 @@ footer {
     top: 40%;
   }
 
+  .functioning {
+    h2 {
+      padding-left: unset;
+    }
+  }
+
+  .functioning-steps {
+    all: unset !important;
+  }
+
   .functioning-step {
     background-color: #f6f6f6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -265,6 +345,7 @@ footer {
     position: relative;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
+    width: unset;
     &:hover {
       .fa-mobile-screen {
         color: $purple;
@@ -534,6 +615,11 @@ footer {
       padding-top: 1.5rem;
     }
   }
+  main {
+    h2 {
+      padding-left: unset;
+    }
+  }
 
   .img-index {
     max-height: 192px;
@@ -553,13 +639,6 @@ footer {
     display: flex;
     align-items: center;
     width: auto;
-    &:active + .check-container {
-      // transform: scaleX(1);
-      // -webkit-transform: scaleX(1);
-      // -moz-transform: scaleX(1);
-      // -ms-transform: scaleX(1);
-      // -o-transform: scaleX(1);
-    }
   }
 
   .dish-title {
@@ -654,6 +733,13 @@ footer {
     gap: 1rem;
   }
 
+  .functioning-steps {
+    // display: flex;
+    // justify-content: center;
+    // gap: 3rem;
+    all: unset !important;
+  }
+
   .functioning-step {
     background-color: #f6f6f6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -662,6 +748,7 @@ footer {
     max-height: 72.38px;
     position: relative;
     margin-bottom: 1.5rem;
+    width: unset;
     &:hover {
       .fa-mobile-screen {
         color: $purple;
@@ -686,8 +773,12 @@ footer {
     left: -10px;
   }
 
-  .sections {
+  .functioning {
     padding: 0 1.5rem 1.5rem;
+    background: $white;
+    h2 {
+      padding-left: unset;
+    }
   }
 
   .fs-24 {

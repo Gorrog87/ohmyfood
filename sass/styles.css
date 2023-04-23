@@ -1,24 +1,3 @@
-h1 {
-  font-family: "Shrikhand", cursive;
-}
-
-nav {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  padding: 0.7rem 0;
-  position: relative;
-}
-nav h1 {
-  margin: unset;
-  text-align: center;
-  font-size: 8vw;
-}
-
-.arrow {
-  position: absolute;
-  left: 5%;
-  top: 35%;
-}
-
 button {
   all: unset;
 }
@@ -26,11 +5,6 @@ button {
 a {
   all: unset;
   cursor: pointer;
-}
-
-footer {
-  background-color: #353535;
-  color: #ffffff;
 }
 
 .shirkhand {
@@ -121,47 +95,138 @@ footer {
   font-size: 24px;
 }
 
-.restaurant-name {
-  font-size: 8vw;
+body {
+  margin: unset;
+  background: #f6f6f6;
 }
 
-.reservez {
-  background-color: #f6f6f6;
+h1 {
+  font-family: "Shrikhand", cursive;
 }
 
-.primary-btn {
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  color: #ffffff;
-  padding: 1rem;
-  width: fit-content;
-  font-family: "Roboto", sans-serif;
-  cursor: pointer;
+@media only screen and (min-width: 1025px) and (max-width: 2560px) {
+  nav {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 0.7rem 0;
+    position: relative;
+    background: #ffffff;
+  }
+  nav h1 {
+    margin: unset;
+    text-align: center;
+    font-size: 6vw;
+  }
+  main h2 {
+    padding-left: 1rem;
+    margin: 3rem 0;
+  }
+  .arrow {
+    position: absolute;
+    left: 5%;
+    top: 41%;
+    font-size: 1.5vw;
+  }
+  .location {
+    background-color: #eaeaea;
+    font-family: "Roboto", sans-serif;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .reservez-section {
+    background: #f6f6f6;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .reservez-section p {
+    margin-top: 3rem;
+  }
+  .functioning {
+    padding: 3rem 0;
+    background: #ffffff;
+  }
+  .functioning h2 {
+    padding-left: 1rem;
+    margin-bottom: 3rem;
+  }
+  footer {
+    background-color: #353535;
+    color: #ffffff;
+  }
+  .restaurant-name {
+    font-size: 8vw;
+  }
+  .reservez {
+    background-color: #f6f6f6;
+  }
+  .functioning-steps {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .functioning-step {
+    background-color: #f6f6f6;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    max-width: 100%;
+    max-height: 72.38px;
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 27%;
+  }
+  .functioning-step:hover .fa-mobile-screen {
+    color: #9356dc;
+  }
+  .functioning-step:hover .fa-list-ul {
+    color: #9356dc;
+  }
+  .functioning-step:hover .fa-store {
+    color: #9356dc;
+  }
+  .number {
+    background-color: #9356dc;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+  }
+  .primary-btn {
+    background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    color: #ffffff;
+    padding: 1rem;
+    width: fit-content;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+  }
+  .primary-btn:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  }
+  .new {
+    font-family: "Roboto", sans-serif;
+    color: #008766;
+    background: #99e2d0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    padding: 0.4rem 0.5rem;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+  }
 }
-.primary-btn:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-}
-
-.new {
-  font-family: "Roboto", sans-serif;
-  color: #008766;
-  background: #99e2d0;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 2px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  padding: 0.4rem 0.5rem;
-  position: absolute;
-  top: 0px;
-  right: 10px;
-}
-
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
   body {
     margin: unset;
@@ -169,6 +234,9 @@ footer {
   }
   main {
     margin: 4rem 1rem 1rem 1rem;
+  }
+  main h2 {
+    padding-left: unset;
   }
   h2 {
     text-align: center;
@@ -191,6 +259,12 @@ footer {
     left: 5%;
     top: 40%;
   }
+  .functioning h2 {
+    padding-left: unset;
+  }
+  .functioning-steps {
+    all: unset !important;
+  }
   .functioning-step {
     background-color: #f6f6f6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -199,6 +273,7 @@ footer {
     position: relative;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
+    width: unset;
   }
   .functioning-step:hover .fa-mobile-screen {
     color: #9356dc;
@@ -436,6 +511,9 @@ footer {
   .main-index h2 {
     padding-top: 1.5rem;
   }
+  main h2 {
+    padding-left: unset;
+  }
   .img-index {
     max-height: 192px;
     min-width: -webkit-fill-available;
@@ -539,6 +617,9 @@ footer {
     align-items: center;
     gap: 1rem;
   }
+  .functioning-steps {
+    all: unset !important;
+  }
   .functioning-step {
     background-color: #f6f6f6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -546,6 +627,7 @@ footer {
     max-height: 72.38px;
     position: relative;
     margin-bottom: 1.5rem;
+    width: unset;
   }
   .functioning-step:hover .fa-mobile-screen {
     color: #9356dc;
@@ -566,8 +648,12 @@ footer {
     position: absolute;
     left: -10px;
   }
-  .sections {
+  .functioning {
     padding: 0 1.5rem 1.5rem;
+    background: #ffffff;
+  }
+  .functioning h2 {
+    padding-left: unset;
   }
   .fs-24 {
     margin-top: unset;
