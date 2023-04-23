@@ -12,7 +12,9 @@ $grey: #7e7e7e;
 $light-grey: #f6f6f6;
 $dark-grey: #353535;
 $white: #ffffff;
-$heart: linear-gradient(#9356dc, #ff79da);
+$heart: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+$location-grey: #eaeaea;
 
 // FONTS -------------------------------------------
 
@@ -21,33 +23,33 @@ $roboto: "Roboto", sans-serif;
 
 // -----------------------------------------------------------------------------------------------------------------------------------
 
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  animation: gif-loader 4s !important;
-  animation-fill-mode: forwards;
-  -webkit-animation: gif-loader 4s !important;
-}
+// .loader {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   animation: gif-loader 4s !important;
+//   animation-fill-mode: forwards;
+//   -webkit-animation: gif-loader 4s !important;
+// }
 
-@keyframes gif-loader {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    z-index: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
+// @keyframes gif-loader {
+//   0% {
+//     opacity: 1;
+//   }
+//   99% {
+//     z-index: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//     z-index: -1;
+//   }
+// }
 
-.loader {
-  width: 250px;
-  height: 200px;
-}
+// .loader {
+//   width: 250px;
+//   height: 200px;
+// }
 
 h1 {
   font-family: $shirkhand;
@@ -151,6 +153,11 @@ footer {
 .ml-1 {
   margin-left: 1rem;
 }
+
+.py-1 {
+  padding: 0 1rem;
+}
+
 .gap-4 {
   gap: 4rem;
 }
@@ -216,6 +223,151 @@ footer {
 //                 --------------------------------- TABLET ---------------------------------------
 
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
+  body {
+    margin: unset;
+  }
+
+  main {
+    margin: 4rem 1rem 1rem 1rem;
+  }
+
+  .location {
+    background-color: $location-grey;
+    font-family: $roboto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 3rem 0;
+  }
+
+  .functioning-step {
+    background-color: #f6f6f6;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    max-height: 72.38px;
+    margin: 1rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    &:hover {
+      .fa-mobile-screen {
+        color: $purple;
+      }
+      .fa-list-ul {
+        color: $purple;
+      }
+      .fa-store {
+        color: $purple;
+      }
+    }
+  }
+
+  article {
+    background-color: #ffffff;
+    margin: 1rem 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+  }
+
+  .img-index {
+    max-height: 192px;
+    min-width: -webkit-fill-available;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .heart {
+    cursor: pointer;
+    position: relative;
+    top: -10px;
+    right: 25px;
+    &:hover #full-heart {
+      opacity: 1;
+      transform: scale(1);
+      background: $heart;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      line-height: 1;
+    }
+    &:hover #empty-heart {
+      opacity: 0;
+    }
+    #empty-heart {
+      position: absolute;
+      line-height: 1;
+      opacity: 1;
+      transition: opacity 0.1s;
+    }
+    #full-heart {
+      opacity: 0;
+      line-height: 1;
+      transition: all 0.45s;
+      transform: scale(0.2);
+      color: transparent;
+      background: $heart;
+      background-clip: text;
+      -webkit-background-clip: text;
+      position: absolute;
+      -webkit-transition: all 0.45s;
+      -moz-transition: all 0.45s;
+      -ms-transition: all 0.45s;
+      -o-transition: all 0.45s;
+    }
+  }
+  
+  .heart-card {
+    z-index: 1;
+    position: relative;
+    right: 30px;
+    bottom: 5px;
+    &:hover #full-heart-card {
+      opacity: 1;
+      transform: scale(1);
+      background: $heart;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      line-height: 1;
+    }
+    &:hover #empty-heart-card {
+      opacity: 0;
+    }
+    #empty-heart-card {
+      position: absolute;
+      line-height: 1;
+      opacity: 1;
+      transition: opacity 0.1s;
+    }
+    #full-heart-card {
+      position: absolute;
+      opacity: 0;
+      line-height: 1;
+      transition: all 0.25s;
+      transform: scale(0.2);
+      color: transparent;
+      background: $heart;
+      background-clip: text;
+      -webkit-background-clip: text;
+      position: absolute;
+      -webkit-transition: all 0.25s;
+      -moz-transition: all 0.25s;
+      -ms-transition: all 0.25s;
+      -o-transition: all 0.25s;
+    }
+  }
+
+  footer {
+    background-color: #353535;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+}
 }
 
 //                 --------------------------------- TABLET ---------------------------------------
@@ -224,9 +376,27 @@ footer {
 
 //                 --------------------------------- MOBILE ---------------------------------------
 
-@media only screen and (max-width: 425px) {
+@media only screen and (min-width: 320px) and (max-width: 425px) {
   body {
     margin: unset;
+  }
+
+  nav {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 0.7rem 0;
+    position: relative;
+    h1 {
+      margin: unset;
+      text-align: center;
+      font-size: 8vw;
+    }
+  }
+
+  .img-index {
+    max-height: 192px;
+    min-width: -webkit-fill-available;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
   }
 
   .main-page {
@@ -317,7 +487,6 @@ footer {
     -moz-transform: scaleX(0);
     -ms-transform: scaleX(0);
     -o-transform: scaleX(0);
-    // display: none;
   }
   .check {
     border-radius: 50%;
@@ -365,7 +534,7 @@ footer {
   }
 
   .location {
-    background-color: #eaeaea;
+    background-color: $location-grey;
     font-family: $roboto;
     width: auto;
     display: flex;
@@ -377,7 +546,8 @@ footer {
   .functioning-step {
     background-color: #f6f6f6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    max-width: 322.49px;
+    // max-width: 322.49px;
+    max-width: 100%;
     max-height: 72.38px;
     position: relative;
     margin-bottom: 1.5rem;
@@ -428,12 +598,7 @@ footer {
     &:hover #full-heart {
       opacity: 1;
       transform: scale(1);
-      background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%),
-        linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0.15),
-          rgba(255, 255, 255, 0.15)
-        );
+      background: $heart;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
@@ -454,12 +619,7 @@ footer {
       transition: all 0.45s;
       transform: scale(0.2);
       color: transparent;
-      background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%),
-        linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0.15),
-          rgba(255, 255, 255, 0.15)
-        );
+      background: $heart;
       background-clip: text;
       -webkit-background-clip: text;
       position: absolute;
@@ -469,6 +629,7 @@ footer {
       -o-transition: all 0.45s;
     }
   }
+
   .heart-card {
     z-index: 1;
     position: relative;
@@ -477,12 +638,7 @@ footer {
     &:hover #full-heart-card {
       opacity: 1;
       transform: scale(1);
-      background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%),
-        linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0.15),
-          rgba(255, 255, 255, 0.15)
-        );
+      background: $heart;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
@@ -504,12 +660,7 @@ footer {
       transition: all 0.25s;
       transform: scale(0.2);
       color: transparent;
-      background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%),
-        linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0.15),
-          rgba(255, 255, 255, 0.15)
-        );
+      background: $heart;
       background-clip: text;
       -webkit-background-clip: text;
       position: absolute;
