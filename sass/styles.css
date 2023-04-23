@@ -165,9 +165,17 @@ footer {
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
   body {
     margin: unset;
+    background: rgba(246, 246, 246, 0.9647058824);
   }
   main {
     margin: 4rem 1rem 1rem 1rem;
+  }
+  h2 {
+    text-align: center;
+    margin: 3rem 0;
+  }
+  nav {
+    background: #ffffff;
   }
   .location {
     background-color: #eaeaea;
@@ -178,9 +186,10 @@ footer {
     align-items: center;
     gap: 1rem;
   }
-  h2 {
-    text-align: center;
-    margin: 3rem 0;
+  .arrow {
+    position: absolute;
+    left: 5%;
+    top: 40%;
   }
   .functioning-step {
     background-color: #f6f6f6;
@@ -292,10 +301,97 @@ footer {
     -ms-transition: all 0.25s;
     -o-transition: all 0.25s;
   }
+  .img-page {
+    width: -webkit-fill-available;
+    object-fit: cover;
+    position: relative;
+  }
+  .main-page {
+    background-color: #f6f6f6;
+    border-radius: 40px 40px 0 0;
+    width: -webkit-fill-available;
+    position: relative;
+    top: -3rem;
+    padding: 1rem;
+    margin: unset;
+  }
+  .restaurant-name {
+    font-size: 6vw;
+  }
+  .primary-btn {
+    background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    color: #ffffff;
+    padding: 1rem;
+    margin: 4rem 0;
+    width: fit-content;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+  }
+  .primary-btn:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  }
+  .dish-title {
+    border-bottom: 3px solid #99e2d0;
+    width: 10vw;
+  }
+  .dish-check-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+  .dish {
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    margin-top: 0.8rem;
+    flex: 1;
+    transition: width 0.3s;
+  }
+  .dish p {
+    margin: 0.3rem;
+  }
+  .check-container {
+    background: #99e2d0;
+    flex: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+    transition: right 1s ease-in-out;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+  }
+  .check {
+    border-radius: 50%;
+    background: #ffffff;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   footer {
     background-color: #353535;
     padding: 0.5rem 1rem;
     color: #ffffff;
+  }
+  footer h4 {
+    margin-top: 1rem;
+    font-size: 5vw;
+  }
+  footer p {
+    margin: 0.4rem 0rem;
+    font-size: 3vw;
+  }
+  footer #contact {
+    margin-top: 0.9rem;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 425px) {
