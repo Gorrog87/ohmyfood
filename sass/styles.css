@@ -117,7 +117,7 @@ h1 {
     font-size: 6vw;
   }
   main h2 {
-    padding-left: 1rem;
+    padding-left: 6rem;
     margin: 3rem 0;
   }
   .arrow {
@@ -148,7 +148,7 @@ h1 {
     background: #ffffff;
   }
   .functioning h2 {
-    padding-left: 1rem;
+    padding-left: 5rem;
     margin-bottom: 3rem;
   }
   footer {
@@ -225,6 +225,54 @@ h1 {
     position: absolute;
     top: 0px;
     right: 10px;
+  }
+  .article-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+  }
+  article {
+    max-width: 35vw;
+    background-color: #ffffff;
+    margin: 2rem 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+  }
+  article img {
+    width: -webkit-fill-available;
+    border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -ms-border-radius: 15px 15px 0 0;
+    -o-border-radius: 15px 15px 0 0;
+  }
+  article .restaurant-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  article .restaurant-location {
+    margin-top: unset;
+  }
+  article p {
+    padding-left: 0.5rem;
+  }
+  .second-img {
+    height: 343px;
+    width: 514px;
+    object-fit: cover;
+  }
+  footer {
+    background-color: #353535;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    margin: 2rem 0 0;
+    padding-right: 3rem;
+    padding: 2rem 3rem 0.3rem 0;
   }
 }
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
@@ -662,85 +710,86 @@ h1 {
   .reservez-section {
     padding-bottom: 2rem;
   }
-  .heart {
-    cursor: pointer;
-    position: relative;
-    top: -10px;
-    right: 25px;
-  }
-  .heart:hover #full-heart {
-    opacity: 1;
-    transform: scale(1);
-    background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    line-height: 1;
-  }
-  .heart:hover #empty-heart {
-    opacity: 0;
-  }
-  .heart #empty-heart {
-    position: absolute;
-    line-height: 1;
-    opacity: 1;
-    transition: opacity 0.1s;
-  }
-  .heart #full-heart {
-    opacity: 0;
-    line-height: 1;
-    transition: all 0.45s;
-    transform: scale(0.2);
-    color: transparent;
-    background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-    background-clip: text;
-    -webkit-background-clip: text;
-    position: absolute;
-    -webkit-transition: all 0.45s;
-    -moz-transition: all 0.45s;
-    -ms-transition: all 0.45s;
-    -o-transition: all 0.45s;
-  }
-  .heart-card {
-    z-index: 1;
-    position: relative;
-    right: 30px;
-    bottom: 5px;
-  }
-  .heart-card:hover #full-heart-card {
-    opacity: 1;
-    transform: scale(1);
-    background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    line-height: 1;
-  }
-  .heart-card:hover #empty-heart-card {
-    opacity: 0;
-  }
-  .heart-card #empty-heart-card {
-    position: absolute;
-    line-height: 1;
-    opacity: 1;
-    transition: opacity 0.1s;
-  }
-  .heart-card #full-heart-card {
-    position: absolute;
-    opacity: 0;
-    line-height: 1;
-    transition: all 0.25s;
-    transform: scale(0.2);
-    color: transparent;
-    background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-    background-clip: text;
-    -webkit-background-clip: text;
-    position: absolute;
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -ms-transition: all 0.25s;
-    -o-transition: all 0.25s;
-  }
+}
+.heart {
+  cursor: pointer;
+  position: relative;
+  top: -10px;
+  right: 25px;
+}
+.heart:hover #full-heart {
+  opacity: 1;
+  transform: scale(1);
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+.heart:hover #empty-heart {
+  opacity: 0;
+}
+.heart #empty-heart {
+  position: absolute;
+  line-height: 1;
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+.heart #full-heart {
+  opacity: 0;
+  line-height: 1;
+  transition: all 0.45s;
+  transform: scale(0.2);
+  color: transparent;
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background-clip: text;
+  -webkit-background-clip: text;
+  position: absolute;
+  -webkit-transition: all 0.45s;
+  -moz-transition: all 0.45s;
+  -ms-transition: all 0.45s;
+  -o-transition: all 0.45s;
+}
+
+.heart-card {
+  z-index: 1;
+  position: relative;
+  right: 30px;
+  bottom: 5px;
+}
+.heart-card:hover #full-heart-card {
+  opacity: 1;
+  transform: scale(1);
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+.heart-card:hover #empty-heart-card {
+  opacity: 0;
+}
+.heart-card #empty-heart-card {
+  position: absolute;
+  line-height: 1;
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+.heart-card #full-heart-card {
+  position: absolute;
+  opacity: 0;
+  line-height: 1;
+  transition: all 0.25s;
+  transform: scale(0.2);
+  color: transparent;
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background-clip: text;
+  -webkit-background-clip: text;
+  position: absolute;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
 }
 
 /*# sourceMappingURL=styles.css.map */
