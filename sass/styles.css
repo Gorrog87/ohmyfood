@@ -71,6 +71,14 @@ a {
   text-align: center;
 }
 
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
 .ml-1 {
   margin-left: 1rem;
 }
@@ -104,7 +112,31 @@ h1 {
   font-family: "Shrikhand", cursive;
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 2560px) {
+.primary-btn {
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  color: #ffffff;
+  padding: 1rem;
+  width: fit-content;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+.primary-btn:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.dish-title {
+  border-bottom: 3px solid #99e2d0;
+  width: 10vw;
+  margin-left: 3rem;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 2560px) {
+  body {
+    background: #ffffff;
+  }
   nav {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     padding: 0.7rem 0;
@@ -114,17 +146,56 @@ h1 {
   nav h1 {
     margin: unset;
     text-align: center;
-    font-size: 6vw;
+    font-size: 3vw;
+  }
+  nav .arrow {
+    position: absolute;
+    left: 5%;
+    top: 41%;
+    font-size: 1.5vw;
   }
   main h2 {
     padding-left: 6rem;
     margin: 3rem 0;
   }
-  .arrow {
-    position: absolute;
-    left: 5%;
-    top: 41%;
-    font-size: 1.5vw;
+  .main-page {
+    position: relative;
+    top: -25px;
+    margin: 0 5rem;
+    background: #f6f6f6;
+    border-radius: 20px 20px 0 0;
+  }
+  .main-page .restaurant-name {
+    font-size: 2vw;
+  }
+  .main-page .heart {
+    cursor: pointer;
+    position: relative;
+    top: -10px;
+    right: 580px;
+  }
+  .dish-title {
+    border-bottom: 3px solid #99e2d0;
+    width: 3vw;
+    margin-left: 9rem;
+  }
+  .dish {
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    margin: 0.8rem 10rem;
+    flex: 1;
+    transition: width 0.3s;
+  }
+  .dish p {
+    margin: 0.3rem;
+  }
+  .img-page {
+    width: -webkit-fill-available;
+    height: 40vh;
+    object-fit: cover;
   }
   .location {
     background-color: #eaeaea;
@@ -137,11 +208,15 @@ h1 {
   }
   .reservez-section {
     background: #f6f6f6;
-    margin-top: 3rem;
+    margin-top: unset;
     padding-bottom: 3rem;
   }
   .reservez-section p {
-    margin-top: 3rem;
+    margin-top: unset;
+    padding-top: 3rem;
+  }
+  .reservez-section span {
+    padding-top: 1rem;
   }
   .functioning {
     padding: 3rem 0;
@@ -275,7 +350,19 @@ h1 {
     padding: 2rem 3rem 0.3rem 0;
   }
 }
-@media only screen and (min-width: 426px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .second-img {
+    width: 358px;
+    height: 239px;
+    object-fit: cover;
+  }
+  .arrow {
+    position: absolute;
+    left: 5%;
+    top: 2%;
+  }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px) {
   body {
     margin: unset;
     background: rgba(246, 246, 246, 0.9647058824);
@@ -291,7 +378,7 @@ h1 {
     margin: 3rem 0;
   }
   nav {
-    background: #ffffff;
+    text-align: center;
   }
   .location {
     background-color: #eaeaea;
@@ -305,7 +392,7 @@ h1 {
   .arrow {
     position: absolute;
     left: 5%;
-    top: 40%;
+    top: 6%;
   }
   .functioning h2 {
     padding-left: unset;
@@ -317,7 +404,7 @@ h1 {
     background-color: #f6f6f6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     max-height: 72.38px;
-    margin: 1rem;
+    margin: 1rem 5rem;
     position: relative;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
@@ -334,10 +421,27 @@ h1 {
   }
   article {
     background-color: #ffffff;
-    margin: 1rem 0;
+    margin: 3rem 5rem;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     position: relative;
+  }
+  .new {
+    font-family: "Roboto", sans-serif;
+    color: #008766;
+    background: #99e2d0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    padding: 0.4rem 0.5rem;
+    position: absolute;
+    top: 0px;
+    right: 10px;
   }
   .img-index {
     max-height: 192px;
@@ -456,10 +560,6 @@ h1 {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
   }
-  .dish-title {
-    border-bottom: 3px solid #99e2d0;
-    width: 10vw;
-  }
   .dish-check-container {
     display: flex;
     align-items: center;
@@ -471,7 +571,7 @@ h1 {
     border-radius: 15px;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
-    margin-top: 0.8rem;
+    margin: 0.8rem 4rem;
     flex: 1;
     transition: width 0.3s;
   }
@@ -507,11 +607,11 @@ h1 {
   }
   footer h4 {
     margin-top: 1rem;
-    font-size: 5vw;
+    font-size: 3vw;
   }
   footer p {
     margin: 0.4rem 0rem;
-    font-size: 3vw;
+    font-size: 2vw;
   }
   footer #contact {
     margin-top: 0.9rem;
@@ -530,6 +630,28 @@ h1 {
     margin: unset;
     text-align: center;
     font-size: 8vw;
+  }
+  .new {
+    font-family: "Roboto", sans-serif;
+    color: #008766;
+    background: #99e2d0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    padding: 0.4rem 0.5rem;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+  }
+  .arrow {
+    position: absolute;
+    left: 5%;
+    top: 40%;
   }
   .img-index {
     max-height: 192px;
@@ -582,6 +704,7 @@ h1 {
   .dish-title {
     border-bottom: 3px solid #99e2d0;
     width: 14%;
+    margin-left: unset;
   }
   .dish {
     cursor: pointer;
