@@ -133,6 +133,92 @@ h1 {
   margin-left: 3rem;
 }
 
+.heart {
+  cursor: pointer;
+  position: relative;
+  top: -10px;
+  right: 25px;
+}
+.heart:hover #full-heart {
+  opacity: 1;
+  transform: scale(1);
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+.heart:hover #empty-heart {
+  opacity: 0;
+}
+.heart #empty-heart {
+  position: absolute;
+  line-height: 1;
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+.heart #full-heart {
+  opacity: 0;
+  line-height: 1;
+  transition: all 0.45s;
+  transform: scale(0.2);
+  color: transparent;
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background-clip: text;
+  -webkit-background-clip: text;
+  position: absolute;
+  -webkit-transition: all 0.45s;
+  -moz-transition: all 0.45s;
+  -ms-transition: all 0.45s;
+  -o-transition: all 0.45s;
+}
+
+.heart-card {
+  z-index: 1;
+  position: relative;
+  right: 30px;
+  bottom: 5px;
+}
+.heart-card:hover #full-heart-card {
+  opacity: 1;
+  transform: scale(1);
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+.heart-card:hover #empty-heart-card {
+  opacity: 0;
+}
+.heart-card #empty-heart-card {
+  position: absolute;
+  line-height: 1;
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+.heart-card #full-heart-card {
+  position: absolute;
+  opacity: 0;
+  line-height: 1;
+  transition: all 0.25s;
+  transform: scale(0.2);
+  color: transparent;
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background-clip: text;
+  -webkit-background-clip: text;
+  position: absolute;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .main-page .heart {
+    right: 700px !important;
+  }
+}
 @media only screen and (min-width: 769px) and (max-width: 2560px) {
   body {
     background: #ffffff;
@@ -172,7 +258,10 @@ h1 {
     cursor: pointer;
     position: relative;
     top: -10px;
-    right: 580px;
+    right: 380px;
+  }
+  .main-page h2 {
+    padding-left: 14rem;
   }
   .dish-title {
     border-bottom: 3px solid #99e2d0;
@@ -400,6 +489,17 @@ h1 {
   .functioning-steps {
     all: unset !important;
   }
+  .number {
+    background-color: #9356dc;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 295px;
+    top: -28px;
+  }
   .functioning-step {
     background-color: #f6f6f6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -407,8 +507,8 @@ h1 {
     margin: 1rem 5rem;
     position: relative;
     margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
     width: unset;
+    border-radius: 15px;
   }
   .functioning-step:hover .fa-mobile-screen {
     color: #9356dc;
@@ -532,6 +632,7 @@ h1 {
     width: -webkit-fill-available;
     object-fit: cover;
     position: relative;
+    height: 40vh;
   }
   .main-page {
     background-color: #f6f6f6;
@@ -542,8 +643,14 @@ h1 {
     padding: 1rem;
     margin: unset;
   }
+  .main-page .restaurant-name {
+    padding-left: 2rem;
+  }
+  .main-page .heart {
+    right: 195px;
+  }
   .restaurant-name {
-    font-size: 6vw;
+    font-size: 5vw;
   }
   .primary-btn {
     background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
@@ -608,6 +715,7 @@ h1 {
   footer h4 {
     margin-top: 1rem;
     font-size: 3vw;
+    text-align: center;
   }
   footer p {
     margin: 0.4rem 0rem;
@@ -833,86 +941,6 @@ h1 {
   .reservez-section {
     padding-bottom: 2rem;
   }
-}
-.heart {
-  cursor: pointer;
-  position: relative;
-  top: -10px;
-  right: 25px;
-}
-.heart:hover #full-heart {
-  opacity: 1;
-  transform: scale(1);
-  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  line-height: 1;
-}
-.heart:hover #empty-heart {
-  opacity: 0;
-}
-.heart #empty-heart {
-  position: absolute;
-  line-height: 1;
-  opacity: 1;
-  transition: opacity 0.1s;
-}
-.heart #full-heart {
-  opacity: 0;
-  line-height: 1;
-  transition: all 0.45s;
-  transform: scale(0.2);
-  color: transparent;
-  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  background-clip: text;
-  -webkit-background-clip: text;
-  position: absolute;
-  -webkit-transition: all 0.45s;
-  -moz-transition: all 0.45s;
-  -ms-transition: all 0.45s;
-  -o-transition: all 0.45s;
-}
-
-.heart-card {
-  z-index: 1;
-  position: relative;
-  right: 30px;
-  bottom: 5px;
-}
-.heart-card:hover #full-heart-card {
-  opacity: 1;
-  transform: scale(1);
-  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  line-height: 1;
-}
-.heart-card:hover #empty-heart-card {
-  opacity: 0;
-}
-.heart-card #empty-heart-card {
-  position: absolute;
-  line-height: 1;
-  opacity: 1;
-  transition: opacity 0.1s;
-}
-.heart-card #full-heart-card {
-  position: absolute;
-  opacity: 0;
-  line-height: 1;
-  transition: all 0.25s;
-  transform: scale(0.2);
-  color: transparent;
-  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  background-clip: text;
-  -webkit-background-clip: text;
-  position: absolute;
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  -ms-transition: all 0.25s;
-  -o-transition: all 0.25s;
 }
 
 /*# sourceMappingURL=styles.css.map */
