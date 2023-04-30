@@ -218,6 +218,25 @@ h1 {
   -o-transition: all 0.25s;
 }
 
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, rgba(0, 0, 0, 0.9) 94%, rgba(0, 0, 0, 0)) top/6.4px 6.4px no-repeat, conic-gradient(rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9));
+  -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 6.4px), #000 0);
+  animation: spinner 0.6s infinite linear;
+  -webkit-animation: spinner 0.6s infinite linear;
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+  }
+}
 @media only screen and (min-width: 769px) and (max-width: 2560px) {
   body {
     background: #ffffff;
