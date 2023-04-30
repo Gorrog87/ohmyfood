@@ -177,7 +177,7 @@ h1 {
   cursor: pointer;
   position: relative;
   top: -10px;
-  right: 25px;
+  right: 30px;
   &:hover #full-heart {
     opacity: 1;
     transform: scale(1);
@@ -255,18 +255,13 @@ h1 {
 }
 
 // Animations ----------------------------------------------------------------------------------
-
-//                 --------------------------------- LG DESKTOP -----------------------------
-
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .main-page {
-    .heart {
-      right: 425px !important;
-    }
-  }
-}
-
-//                 --------------------------------- LG DESKTOP -----------------------------
+// @media only screen and (min-width: 769px) and (max-width: 1024px) {
+//   .main-page {
+//     .heart {
+//       right: 425px !important;
+//     }
+//   }
+// }
 
 //                 --------------------------------- DESKTOP --------------------------------
 
@@ -594,6 +589,12 @@ h1 {
     left: 5%;
     top: 2%;
   }
+
+  .main-page {
+    .heart {
+      right: 390px !important;
+    }
+  }
 }
 
 //                 --------------------------------- TABLET ---------------------------------------
@@ -814,7 +815,7 @@ h1 {
       padding-left: 2rem;
     }
     .heart {
-      right: 195px;
+      right: 270px;
     }
   }
 

@@ -141,7 +141,7 @@ h1 {
   cursor: pointer;
   position: relative;
   top: -10px;
-  right: 25px;
+  right: 30px;
 }
 .heart:hover #full-heart {
   opacity: 1;
@@ -218,11 +218,6 @@ h1 {
   -o-transition: all 0.25s;
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .main-page .heart {
-    right: 425px !important;
-  }
-}
 @media only screen and (min-width: 769px) and (max-width: 2560px) {
   body {
     background: #ffffff;
@@ -507,6 +502,9 @@ h1 {
     left: 5%;
     top: 2%;
   }
+  .main-page .heart {
+    right: 390px !important;
+  }
 }
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   body {
@@ -704,7 +702,7 @@ h1 {
     padding-left: 2rem;
   }
   .main-page .heart {
-    right: 195px;
+    right: 270px;
   }
   .restaurant-name {
     font-size: 5vw;
