@@ -227,7 +227,7 @@ h1 {
   background-color: #ffffff;
   animation: loader-container 1.5s ease;
   -webkit-animation: loader-container 1.5s ease-in-out;
-  animation-duration: 3s;
+  animation-duration: 2.8s;
 }
 
 @keyframes loader-container {
@@ -248,7 +248,7 @@ h1 {
 .loader span {
   font-size: 0vh;
   animation: letter;
-  -webkit-animation: letter 1.7s ease;
+  -webkit-animation: letter 1.5s ease;
 }
 
 h1 span:nth-child(1) {
@@ -1124,6 +1124,21 @@ h1 span:nth-child(8) {
     -o-transition: transform;
     transition-duration: 0.5s;
     margin-right: unset;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .reservez-section {
+    padding: 0px 1rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .reservez-section {
+    padding: 0px 1rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .reservez-section {
+    padding: 0px 2rem;
   }
 }
 
