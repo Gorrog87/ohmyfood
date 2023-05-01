@@ -255,78 +255,80 @@ h1 {
   }
 }
 
-// .spinner-container {
-//   position: relative;
-//   height: 100vh;
-//   width: 100vw;
-//   z-index: 1;
-//   background-color: $white;
-//   animation: spinner-container;
-//   // animation-delay: 2.5s;
-//   // transform: translateY(-9999px);
-
-//   -webkit-animation: spinner-container;
-//   animation-duration: 2.5s;
-//   display: none;
-// }
-
-// @keyframes spinner-container {
-//   0% {
-//     // height: 100vh;
-//     display: contents;
-//     transform: translateY(0);
-//     -webkit-transform: translateY(0);
-//     -moz-transform: translateY(0);
-//     -ms-transform: translateY(0);
-//     -o-transform: translateY(0);
-// }
-
-// 100% {
-//   transform: translateY(-9999px);
-//   -webkit-transform: translateY(-9999px);
-//   -moz-transform: translateY(-9999px);
-//   -ms-transform: translateY(-9999px);
-//   -o-transform: translateY(-9999px);
-//   display: none;
-// }
-// }
-
-.spinner {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  right: 50%;
-  top: 30%;
-  border-radius: 50%;
-  background: radial-gradient(farthest-side, rgba(0, 0, 0, 0.9) 94%, #0000)
-      top/6.4px 6.4px no-repeat,
-    conic-gradient(#0000 30%, rgba(0, 0, 0, 0.9));
-  -webkit-mask: radial-gradient(
-    farthest-side,
-    #0000 calc(100% - 6.4px),
-    #000 0
-  );
-  animation: spinner 0.6s linear;
-  animation-delay: 0.5s;
-  -webkit-animation: spinner 0.6s infinite linear;
-  // 1er argument -> nom du keyframes
-  // 2eme argument -> le temps pour faire le tour de l'animation
-  // 3eme argument -> nombre de tours
-  // 4eme argument ->  type d'aniimation
+.loader-container {
+  position: relative;
+  height: 0vh;
+  width: 100vw;
+  z-index: 1;
+  background-color: $white;
+  animation: loader-container 1.5s ease;
+  -webkit-animation: loader-container 1.5s ease-in-out;
+  animation-duration: 3s;
 }
 
-@keyframes spinner {
+@keyframes loader-container {
   0% {
-    transform: rotate(1turn);
-    -webkit-transform: rotate(1turn);
-    -moz-transform: rotate(1turn);
-    -ms-transform: rotate(1turn);
-    -o-transform: rotate(1turn);
+    height: 100vh;
   }
 
-  // 100% {
+  90% {
+    height: 100vh;
+  }
 
-  // }
+  100% {
+    height: 0vh;
+  }
+}
+
+.loader {
+  h1 {
+    text-align: center;
+    padding-top: 10rem;
+  }
+  span {
+    font-size: 0vh;
+    animation: letter;
+    -webkit-animation: letter 1.7s ease;
+  }
+}
+
+h1 span:nth-child(1) {
+  animation-delay: .1s;
+}
+h1 span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+h1 span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+h1 span:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+@keyframes letter {
+  0% {
+    font-size: 6vh;
+  }
+
+  50% {
+ font-size: 6vh;
+  }
+
+  100% {
+  font-size: 6vh;
+  }
 }
 
 // Animations ----------------------------------------------------------------------------------
@@ -1026,7 +1028,7 @@ h1 {
   }
 
   .spinner {
-    top: 9%;
+    top: 40%;
   }
 
   .new {
@@ -1132,7 +1134,7 @@ h1 {
     }
     &:hover {
       #price {
-        margin-right: 3rem !important;
+        margin-right: 3.5rem !important;
         transition: 0.13s;
         -webkit-transition: 0.13s;
         -moz-transition: 0.13s;
@@ -1143,7 +1145,6 @@ h1 {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        text-overflow: clip ellipsis;
       }
     }
   }
