@@ -944,6 +944,12 @@ h1 {
         -ms-transition: 0.13s;
         -o-transition: 0.13s;
       }
+      // .ellipsis {
+      //   overflow: hidden;
+      //   white-space: nowrap;
+      //   text-overflow: ellipsis;
+      //   text-overflow: clip ellipsis;
+      // }
     }
   }
 
@@ -1132,6 +1138,12 @@ h1 {
         -moz-transition: 0.13s;
         -ms-transition: 0.13s;
         -o-transition: 0.13s;
+      }
+      .ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-overflow: clip ellipsis;
       }
     }
   }
