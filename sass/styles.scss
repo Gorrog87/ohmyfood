@@ -322,13 +322,35 @@ h1 span:nth-child(8) {
     font-size: 6vh;
   }
 
-  50% {
-    font-size: 6vh;
-  }
-
   100% {
     font-size: 6vh;
   }
+}
+
+.dish {
+  animation: dish-animation 2s ease;
+  -webkit-animation: dish-animation 2s ease;
+}
+
+@keyframes dish-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(+20px);
+    -webkit-transform: translateY(+20px);
+    -moz-transform: translateY(+20px);
+    -ms-transform: translateY(+20px);
+    -o-transform: translateY(+20px);
+}
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+}
+
 }
 
 // Animations ----------------------------------------------------------------------------------
@@ -399,6 +421,7 @@ h1 span:nth-child(8) {
     padding: 0.5rem;
     margin: 0.8rem 10rem;
     position: relative;
+    opacity: 1;
     p {
       margin: 0.3rem;
     }
@@ -426,7 +449,7 @@ h1 span:nth-child(8) {
     position: absolute;
     right: 0;
     top: 0;
-    width: 5%;
+    width: 9%;
     height: 100%;
     border-radius: 0 15px 15px 0;
     transition: 0.13s ease-in-out;
@@ -646,6 +669,12 @@ h1 span:nth-child(8) {
   }
 }
 
+@media only screen and (min-width: 1025px) and (max-width: 2560px) {
+  .check-container {
+    width: 5%;
+  }
+}
+
 //                ---------------------------------- Fin DESKTOP ---------------------------------
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -729,7 +758,8 @@ h1 span:nth-child(8) {
     color: #ffffff;
     border-radius: 50%;
     position: absolute;
-    left: 295px;
+    // left: 295px;
+    left: 50%;
     top: -28px;
   }
 
@@ -1031,6 +1061,10 @@ h1 span:nth-child(8) {
     top: 40%;
   }
 
+  .primary-btn {
+    margin-bottom: 1.5rem;
+  }
+
   .new {
     font-family: $roboto;
     color: $green;
@@ -1154,7 +1188,7 @@ h1 span:nth-child(8) {
     position: absolute;
     right: 0;
     top: 0;
-    width: 17%;
+    width: 15%;
     height: 100%;
     border-radius: 0 15px 15px 0;
     transition: 0.13s ease-in-out;
@@ -1296,6 +1330,43 @@ h1 span:nth-child(8) {
 @media only screen and (max-width: 320px) {
   .reservez-section {
     padding: 0px 1rem;
+  }
+
+  .dish {
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    margin-top: 0.8rem;
+    transition: width 0.3s;
+    position: relative;
+    p {
+      margin: 0.2rem;
+      font-size: 4vw;
+    }
+    &:hover .check-container {
+      transform: scaleX(1);
+      -webkit-transform: scaleX(1);
+      -moz-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+      -o-transform: scaleX(1);
+    }
+    &:hover {
+      #price {
+        margin-right: 2.6rem !important;
+        transition: 0.13s;
+        -webkit-transition: 0.13s;
+        -moz-transition: 0.13s;
+        -ms-transition: 0.13s;
+        -o-transition: 0.13s;
+      }
+      .ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
   }
 }
 @media only screen and (max-width: 375px) {
