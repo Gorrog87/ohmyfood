@@ -146,6 +146,12 @@ h1 {
   font-family: $shirkhand;
 }
 
+h2 {
+  font-family: $shirkhand;
+}
+
+
+
 .primary-btn {
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -396,7 +402,7 @@ h1 span:nth-child(8) {
     padding: 0.7rem 0;
     position: relative;
     background: $white;
-    h1 {
+    h2 {
       margin: unset;
       text-align: center;
       font-size: 3vw;
@@ -747,7 +753,7 @@ h1 span:nth-child(8) {
     padding: 0.7rem 0;
     position: relative;
     background: $white;
-    h1 {
+    h2 {
       margin: unset;
       text-align: center;
       font-size: 3vw;
@@ -1083,7 +1089,7 @@ h1 span:nth-child(8) {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     padding: 0.7rem 0;
     position: relative;
-    h1 {
+    h2 {
       margin: unset;
       text-align: center;
       font-size: 8vw;
