@@ -330,6 +330,7 @@ h1 span:nth-child(8) {
 .dish {
   animation: dish-animation 2s ease;
   -webkit-animation: dish-animation 2s ease;
+  // animation-delay: 2s;
 }
 
 @keyframes dish-animation {
@@ -340,7 +341,7 @@ h1 span:nth-child(8) {
     -moz-transform: translateY(+20px);
     -ms-transform: translateY(+20px);
     -o-transform: translateY(+20px);
-}
+  }
 
   100% {
     opacity: 1;
@@ -349,8 +350,36 @@ h1 span:nth-child(8) {
     -moz-transform: translateY(0px);
     -ms-transform: translateY(0px);
     -o-transform: translateY(0px);
+  }
 }
 
+.dish-title {
+  animation: dish-title-animation .4s ease-in-out;
+  -webkit-animation: dish-title-animation .4s ease-in-out;
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+}
+
+@keyframes dish-title-animation {
+  0%{
+    opacity: 0;
+    transform: translateX(-300px);
+    -webkit-transform: translateX(-300px);
+    -moz-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
+    -o-transform: translateX(-300px);
+}
+
+  100% {
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
 }
 
 // Animations ----------------------------------------------------------------------------------
