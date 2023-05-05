@@ -281,6 +281,7 @@ h1 {
 }
 
 .loader {
+  font-size: 0vh;
   h1 {
     text-align: center;
     padding-top: 10rem;
@@ -330,7 +331,6 @@ h1 span:nth-child(8) {
 .dish {
   animation: dish-animation 2s ease;
   -webkit-animation: dish-animation 2s ease;
-  // animation-delay: 2s;
 }
 
 @keyframes dish-animation {
@@ -354,8 +354,8 @@ h1 span:nth-child(8) {
 }
 
 .dish-title {
-  animation: dish-title-animation .4s ease-in-out;
-  -webkit-animation: dish-title-animation .4s ease-in-out;
+  animation: dish-title-animation 0.4s linear;
+  -webkit-animation: dish-title-animation 0.4s linear;
   transform: translateX(0px);
   -webkit-transform: translateX(0px);
   -moz-transform: translateX(0px);
@@ -364,14 +364,14 @@ h1 span:nth-child(8) {
 }
 
 @keyframes dish-title-animation {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(-300px);
     -webkit-transform: translateX(-300px);
     -moz-transform: translateX(-300px);
     -ms-transform: translateX(-300px);
     -o-transform: translateX(-300px);
-}
+  }
 
   100% {
     transform: translateX(0px);
@@ -379,7 +379,7 @@ h1 span:nth-child(8) {
     -moz-transform: translateX(0px);
     -ms-transform: translateX(0px);
     -o-transform: translateX(0px);
-}
+  }
 }
 
 // Animations ----------------------------------------------------------------------------------
@@ -575,13 +575,11 @@ h1 span:nth-child(8) {
     background-color: #f6f6f6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
-    //max-width: 322.49px;
     max-width: 100%;
     max-height: 72.38px;
     position: relative;
     margin-bottom: 1.5rem;
     width: 27%;
-    //attention a cette largeur qui peut régir les autres proportions dans les media queries
     &:hover {
       .fa-mobile-screen {
         color: $purple;
@@ -653,7 +651,6 @@ h1 span:nth-child(8) {
 
   article {
     max-width: 35vw;
-    // max-height: 15vh;
     background-color: #ffffff;
     margin: 2rem 0;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -746,7 +743,21 @@ h1 span:nth-child(8) {
   }
 
   nav {
-    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 0.7rem 0;
+    position: relative;
+    background: $white;
+    h1 {
+      margin: unset;
+      text-align: center;
+      font-size: 3vw;
+    }
+    .arrow {
+      position: absolute;
+      left: 5%;
+      top: 41%;
+      font-size: 2vw;
+    }
   }
 
   .spinner {
@@ -787,7 +798,6 @@ h1 span:nth-child(8) {
     color: #ffffff;
     border-radius: 50%;
     position: absolute;
-    // left: 295px;
     left: 50%;
     top: -28px;
   }
@@ -1005,12 +1015,6 @@ h1 span:nth-child(8) {
         -ms-transition: 0.13s;
         -o-transition: 0.13s;
       }
-      // .ellipsis {
-      //   overflow: hidden;
-      //   white-space: nowrap;
-      //   text-overflow: ellipsis;
-      //   text-overflow: clip ellipsis;
-      // }
     }
   }
 
@@ -1289,16 +1293,12 @@ h1 span:nth-child(8) {
   }
 
   .functioning-steps {
-    // display: flex;
-    // justify-content: center;
-    // gap: 3rem;
     all: unset !important;
   }
 
   .functioning-step {
     background-color: #f6f6f6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    // max-width: 322.49px;
     max-width: 100%;
     max-height: 72.38px;
     position: relative;
