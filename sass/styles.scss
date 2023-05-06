@@ -225,7 +225,7 @@ h2 {
   position: relative;
   right: 30px;
   bottom: 5px;
-  &:hover #full-heart-card {
+  &:hover .full-heart-card {
     opacity: 1;
     transform: scale(1);
     background: $heart;
@@ -234,16 +234,16 @@ h2 {
     color: transparent;
     line-height: 1;
   }
-  &:hover #empty-heart-card {
+  &:hover .empty-heart-card {
     opacity: 0;
   }
-  #empty-heart-card {
+  .empty-heart-card {
     position: absolute;
     line-height: 1;
     opacity: 1;
     transition: opacity 0.1s;
   }
-  #full-heart-card {
+  .full-heart-card {
     position: absolute;
     opacity: 0;
     line-height: 1;
@@ -908,7 +908,7 @@ h1 span:nth-child(8) {
     position: relative;
     right: 30px;
     bottom: 5px;
-    &:hover #full-heart-card {
+    &:hover .full-heart-card {
       opacity: 1;
       transform: scale(1);
       background: $heart;
@@ -917,16 +917,16 @@ h1 span:nth-child(8) {
       color: transparent;
       line-height: 1;
     }
-    &:hover #empty-heart-card {
+    &:hover .empty-heart-card {
       opacity: 0;
     }
-    #empty-heart-card {
+    .empty-heart-card {
       position: absolute;
       line-height: 1;
       opacity: 1;
       transition: opacity 0.1s;
     }
-    #full-heart-card {
+    .full-heart-card {
       position: absolute;
       opacity: 0;
       line-height: 1;

@@ -188,7 +188,7 @@ h2 {
   right: 30px;
   bottom: 5px;
 }
-.heart-card:hover #full-heart-card {
+.heart-card:hover .full-heart-card {
   opacity: 1;
   transform: scale(1);
   background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
@@ -197,16 +197,16 @@ h2 {
   color: transparent;
   line-height: 1;
 }
-.heart-card:hover #empty-heart-card {
+.heart-card:hover .empty-heart-card {
   opacity: 0;
 }
-.heart-card #empty-heart-card {
+.heart-card .empty-heart-card {
   position: absolute;
   line-height: 1;
   opacity: 1;
   transition: opacity 0.1s;
 }
-.heart-card #full-heart-card {
+.heart-card .full-heart-card {
   position: absolute;
   opacity: 0;
   line-height: 1;
@@ -802,7 +802,7 @@ h1 span:nth-child(8) {
     right: 30px;
     bottom: 5px;
   }
-  .heart-card:hover #full-heart-card {
+  .heart-card:hover .full-heart-card {
     opacity: 1;
     transform: scale(1);
     background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
@@ -811,16 +811,16 @@ h1 span:nth-child(8) {
     color: transparent;
     line-height: 1;
   }
-  .heart-card:hover #empty-heart-card {
+  .heart-card:hover .empty-heart-card {
     opacity: 0;
   }
-  .heart-card #empty-heart-card {
+  .heart-card .empty-heart-card {
     position: absolute;
     line-height: 1;
     opacity: 1;
     transition: opacity 0.1s;
   }
-  .heart-card #full-heart-card {
+  .heart-card .full-heart-card {
     position: absolute;
     opacity: 0;
     line-height: 1;
