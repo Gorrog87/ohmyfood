@@ -468,7 +468,7 @@ h1 span:nth-child(8) {
       -o-transform: scaleX(1);
     }
     &:hover {
-      #price {
+      .price {
         margin-right: 3rem !important;
         transition: 0.13s;
         -webkit-transition: 0.13s;
@@ -510,7 +510,7 @@ h1 span:nth-child(8) {
     align-items: center;
   }
 
-  #price {
+  .price {
     transition: transform;
     -webkit-transition: transform;
     -moz-transition: transform;
@@ -704,6 +704,12 @@ h1 span:nth-child(8) {
 @media only screen and (min-width: 1025px) and (max-width: 2560px) {
   .check-container {
     width: 5%;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .second-img {
+    width: 504px;
   }
 }
 
@@ -1013,7 +1019,7 @@ h1 span:nth-child(8) {
       -o-transform: scaleX(1);
     }
     &:hover {
-      #price {
+      .price {
         margin-right: 3rem !important;
         transition: 0.13s;
         -webkit-transition: 0.13s;
@@ -1206,7 +1212,7 @@ h1 span:nth-child(8) {
       -o-transform: scaleX(1);
     }
     &:hover {
-      #price {
+      .price {
         margin-right: 3.5rem !important;
         transition: 0.13s;
         -webkit-transition: 0.13s;
@@ -1351,7 +1357,7 @@ h1 span:nth-child(8) {
     padding-bottom: 2rem;
   }
 
-  #price {
+  .price {
     transition: transform;
     -webkit-transition: transform;
     -moz-transition: transform;
@@ -1388,7 +1394,7 @@ h1 span:nth-child(8) {
       -o-transform: scaleX(1);
     }
     &:hover {
-      #price {
+      .price {
         margin-right: 2.6rem !important;
         transition: 0.13s;
         -webkit-transition: 0.13s;

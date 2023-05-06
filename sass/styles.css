@@ -417,7 +417,7 @@ h1 span:nth-child(8) {
     -ms-transform: scaleX(1);
     -o-transform: scaleX(1);
   }
-  .dish:hover #price {
+  .dish:hover .price {
     margin-right: 3rem !important;
     transition: 0.13s;
     -webkit-transition: 0.13s;
@@ -455,7 +455,7 @@ h1 span:nth-child(8) {
     justify-content: center;
     align-items: center;
   }
-  #price {
+  .price {
     transition: transform;
     -webkit-transition: transform;
     -moz-transition: transform;
@@ -625,6 +625,11 @@ h1 span:nth-child(8) {
 @media only screen and (min-width: 1025px) and (max-width: 2560px) {
   .check-container {
     width: 5%;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .second-img {
+    width: 504px;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -896,7 +901,7 @@ h1 span:nth-child(8) {
     -ms-transform: scaleX(1);
     -o-transform: scaleX(1);
   }
-  .dish:hover #price {
+  .dish:hover .price {
     margin-right: 3rem !important;
     transition: 0.13s;
     -webkit-transition: 0.13s;
@@ -1063,7 +1068,7 @@ h1 span:nth-child(8) {
     -ms-transform: scaleX(1);
     -o-transform: scaleX(1);
   }
-  .dish:hover #price {
+  .dish:hover .price {
     margin-right: 3.5rem !important;
     transition: 0.13s;
     -webkit-transition: 0.13s;
@@ -1193,7 +1198,7 @@ h1 span:nth-child(8) {
   .reservez-section {
     padding-bottom: 2rem;
   }
-  #price {
+  .price {
     transition: transform;
     -webkit-transition: transform;
     -moz-transition: transform;
@@ -1228,7 +1233,7 @@ h1 span:nth-child(8) {
     -ms-transform: scaleX(1);
     -o-transform: scaleX(1);
   }
-  .dish:hover #price {
+  .dish:hover .price {
     margin-right: 2.6rem !important;
     transition: 0.13s;
     -webkit-transition: 0.13s;
