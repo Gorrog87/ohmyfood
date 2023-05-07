@@ -230,7 +230,7 @@ h2 {
   z-index: 1;
   background-color: #ffffff;
   animation: loader-container 1.5s ease;
-  -webkit-animation: loader-container 1.5s ease-in-out;
+  -webkit-animation: loader-container 1.5s ease;
   animation-duration: 2.8s;
 }
 
@@ -306,11 +306,10 @@ h1 span:nth-child(8) {
 @keyframes dish-animation {
   0% {
     opacity: 0;
-    transform: translateY(20px);
-    -webkit-transform: translateY(20px);
     -moz-transform: translateY(20px);
     -ms-transform: translateY(20px);
     -o-transform: translateY(20px);
+    -webkit-transform: translateY(20px);
   }
   100% {
     opacity: 1;

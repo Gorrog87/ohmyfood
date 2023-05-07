@@ -187,27 +187,27 @@ h2 {
   right: 30px;
   &:hover #full-heart {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1); // taille de l'élément au déclenchement de l'événement
     background: $heart;
-    background-clip: text;
+    background-clip: text; // ce qui permet de remplir le coeur sans qu'il dépassse.
     -webkit-background-clip: text;
     color: transparent;
     line-height: 1;
   }
-  &:hover #empty-heart {
+  &:hover #empty-heart { // au survol, le coeur vide disparait
     opacity: 0;
   }
   #empty-heart {
     position: absolute;
     line-height: 1;
     opacity: 1;
-    transition: opacity 0.1s;
+    transition: opacity 0.1s; // la transistion joue sur l'opacité, et vient chercher la valeur dans la class qui délenche (:hover)
   }
   #full-heart {
     opacity: 0;
     line-height: 1;
-    transition: all 0.45s;
-    transform: scale(0.2);
+    transition: all 0.45s;  // prend en compte toutes les animations et fait durer l'animation durant 45 ms
+    transform: scale(0.2); // taille initiale de l'élément
     color: transparent;
     background: $heart;
     background-clip: text;
@@ -225,34 +225,34 @@ h2 {
   position: relative;
   right: 30px;
   bottom: 5px;
-  &:hover .full-heart-card {
+  &:hover .full-heart-card { // au survol le coeur rempli apparait
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1); // sa taille est à 100%
     background: $heart;
-    background-clip: text;
+    background-clip: text; // ce qui permet de mettre la couleur dans le coeur sans que ça dépasse du conteneur
     -webkit-background-clip: text;
     color: transparent;
     line-height: 1;
   }
-  &:hover .empty-heart-card {
+  &:hover .empty-heart-card { // au survol, le coeur vide disparait avec opacity 0
     opacity: 0;
   }
   .empty-heart-card {
     position: absolute;
     line-height: 1;
     opacity: 1;
-    transition: opacity 0.1s;
+    transition: opacity 0.1s; // la transition jouera sur l'opacity (valeur que l'on prendra dans le selecteur qui déclenche l'événement ) et durera 1ms
   }
   .full-heart-card {
     position: absolute;
     opacity: 0;
     line-height: 1;
-    transition: all 0.25s;
-    transform: scale(0.2);
+    transition: all 0.25s;  // prend en compte toutes les animations et fait durer l'animation durant 45 ms
+    transform: scale(0.2);  // sa taille est à 20% de sa totalité
     color: transparent;
     background: $heart;
     background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text;  // ce qui permet de mettre la couleur dans le coeur sans que ça dépasse du conteneur
     position: absolute;
     -webkit-transition: all 0.25s;
     -moz-transition: all 0.25s;
@@ -263,18 +263,18 @@ h2 {
 
 .loader-container {
   position: relative;
-  height: 0vh;
+  height: 0vh; // taille initiale du loader avant déclenchement
   width: 100vw;
   z-index: 1;
   background-color: $white;
-  animation: loader-container 1.5s ease;
-  -webkit-animation: loader-container 1.5s ease-in-out;
-  animation-duration: 2.8s;
+  animation: loader-container 1.5s ease;  // appel l'animation "loader-container", durée: 1.5s, type d'animation: douce
+  -webkit-animation: loader-container 1.5s ease;
+  animation-duration: 2.8s; // détermine la longeur de l'événement
 }
 
 @keyframes loader-container {
   0% {
-    height: 100vh;
+    height: 100vh;  // taille au déclenchement de l'événement
   }
 
   90% {
@@ -282,25 +282,25 @@ h2 {
   }
 
   100% {
-    height: 0vh;
+    height: 0vh;  // taille à la fin de l'événement
   }
 }
 
 .loader {
-  font-size: 0vh;
+  font-size: 0vh; // taille du loader hors événement
   h1 {
     text-align: center;
     padding-top: 10rem;
   }
   span {
-    font-size: 0vh;
+    font-size: 0vh; // taille de chaque lettre hors événement
     animation: letter;
-    -webkit-animation: letter 1.5s ease;
+    -webkit-animation: letter 1.5s ease;  //  déclenche le keyframe letter, dure 1.5s et assigne le type d'animation
   }
 }
 
 h1 span:nth-child(1) {
-  animation-delay: 0.1s;
+  animation-delay: 0.1s;  // temps d'attente entre chaque apparition de lettre
 }
 h1 span:nth-child(2) {
   animation-delay: 0.2s;
@@ -342,16 +342,17 @@ h1 span:nth-child(8) {
 @keyframes dish-animation {
   0% {
     opacity: 0;
-    transform: translateY(+20px);
-    -webkit-transform: translateY(+20px);
+    //  le plat est transparent au début de l'événement
+    //  position au début de l'événement à 20px plus bas 
     -moz-transform: translateY(+20px);
     -ms-transform: translateY(+20px);
     -o-transform: translateY(+20px);
-  }
+    -webkit-transform: translateY(+20px);
+}
 
   100% {
-    opacity: 1;
-    transform: translateY(0px);
+    opacity: 1; // le plat est visible à la fin de l'événement
+    transform: translateY(0px); // le plat a reprit sa position initiale
     -webkit-transform: translateY(0px);
     -moz-transform: translateY(0px);
     -ms-transform: translateY(0px);
@@ -360,9 +361,9 @@ h1 span:nth-child(8) {
 }
 
 .dish-title {
-  animation: dish-title-animation 0.4s linear;
+  animation: dish-title-animation 0.4s linear; // nom du keyframe assigné, durée de l'animation, type de mouvement ( ici linéaire )
   -webkit-animation: dish-title-animation 0.4s linear;
-  transform: translateX(0px);
+  transform: translateX(0px); // position initiale de l'élément
   -webkit-transform: translateX(0px);
   -moz-transform: translateX(0px);
   -ms-transform: translateX(0px);
@@ -372,7 +373,7 @@ h1 span:nth-child(8) {
 @keyframes dish-title-animation {
   0% {
     opacity: 0;
-    transform: translateX(-300px);
+    transform: translateX(-300px); // position de l'élément au déclenchement de l'animation
     -webkit-transform: translateX(-300px);
     -moz-transform: translateX(-300px);
     -ms-transform: translateX(-300px);
@@ -380,7 +381,7 @@ h1 span:nth-child(8) {
   }
 
   100% {
-    transform: translateX(0px);
+    transform: translateX(0px); // position de l'élément à la fin de l'animation
     -webkit-transform: translateX(0px);
     -moz-transform: translateX(0px);
     -ms-transform: translateX(0px);
