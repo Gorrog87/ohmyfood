@@ -586,9 +586,10 @@ h1 span:nth-child(8) {
     align-items: center;
     justify-content: center;
     gap: 10rem;
+    margin: 0 2vw;
   }
   article {
-    width: 40vw;
+    width: 35vw;
     background-color: #ffffff;
     margin: 2rem 0;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -615,7 +616,6 @@ h1 span:nth-child(8) {
     padding-left: 0.5rem;
   }
   article #second-img {
-    max-height: 30vh;
     object-fit: cover;
   }
   footer {
