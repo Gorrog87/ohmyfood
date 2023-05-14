@@ -414,6 +414,12 @@ h1 span:nth-child(8) {
       }
     }
   }
+
+  article {
+    #second-img {
+      height: 37vh;
+    }
+  }
 }
 
 //                 ---------------------------------- LG Desktop -------------------------------
@@ -737,19 +743,17 @@ h1 span:nth-child(8) {
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  // .second-img {
-  //   width: 504px;
-  // }
+  article {
+    #second-img {
+      height: 36vh;
+    }
+  }
 }
 
 //                ---------------------------------- Fin DESKTOP ---------------------------------
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  // .second-img {
-  //   width: 358px;
-  //   height: 239px;
-  //   object-fit: cover;
-  // }
+
   .arrow {
     position: absolute;
     left: 5%;
@@ -761,6 +765,13 @@ h1 span:nth-child(8) {
       right: 390px !important;
     }
   }
+
+article {
+  #second-img {
+    height: 34vh;
+  }
+}
+
 }
 
 //                 --------------------------------- TABLET ---------------------------------------

@@ -355,6 +355,9 @@ h1 span:nth-child(8) {
   .dish:hover .price {
     margin-right: 7rem !important;
   }
+  article #second-img {
+    height: 37vh;
+  }
 }
 @media only screen and (min-width: 769px) and (max-width: 2560px) {
   body {
@@ -635,6 +638,11 @@ h1 span:nth-child(8) {
     width: 5%;
   }
 }
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  article #second-img {
+    height: 36vh;
+  }
+}
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .arrow {
     position: absolute;
@@ -643,6 +651,9 @@ h1 span:nth-child(8) {
   }
   .main-page .heart {
     right: 390px !important;
+  }
+  article #second-img {
+    height: 34vh;
   }
 }
 @media only screen and (min-width: 426px) and (max-width: 768px) {
