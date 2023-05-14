@@ -150,7 +150,14 @@ h2 {
   font-family: $shirkhand;
 }
 
+.reservez-section {
+  cursor: default;
+}
 
+// .img-index {
+//   width: 100%;
+//   height: 100%;
+// }
 
 .primary-btn {
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
@@ -194,7 +201,8 @@ h2 {
     color: transparent;
     line-height: 1;
   }
-  &:hover #empty-heart { // au survol, le coeur vide disparait
+  &:hover #empty-heart {
+    // au survol, le coeur vide disparait
     opacity: 0;
   }
   #empty-heart {
@@ -206,7 +214,7 @@ h2 {
   #full-heart {
     opacity: 0;
     line-height: 1;
-    transition: all 0.45s;  // prend en compte toutes les animations et fait durer l'animation durant 45 ms
+    transition: all 0.45s; // prend en compte toutes les animations et fait durer l'animation durant 45 ms
     transform: scale(0.2); // taille initiale de l'élément
     color: transparent;
     background: $heart;
@@ -225,7 +233,8 @@ h2 {
   position: relative;
   right: 30px;
   bottom: 5px;
-  &:hover .full-heart-card { // au survol le coeur rempli apparait
+  &:hover .full-heart-card {
+    // au survol le coeur rempli apparait
     opacity: 1;
     transform: scale(1); // sa taille est à 100%
     background: $heart;
@@ -234,7 +243,8 @@ h2 {
     color: transparent;
     line-height: 1;
   }
-  &:hover .empty-heart-card { // au survol, le coeur vide disparait avec opacity 0
+  &:hover .empty-heart-card {
+    // au survol, le coeur vide disparait avec opacity 0
     opacity: 0;
   }
   .empty-heart-card {
@@ -247,12 +257,12 @@ h2 {
     position: absolute;
     opacity: 0;
     line-height: 1;
-    transition: all 0.25s;  // prend en compte toutes les animations et fait durer l'animation durant 45 ms
-    transform: scale(0.2);  // sa taille est à 20% de sa totalité
+    transition: all 0.25s; // prend en compte toutes les animations et fait durer l'animation durant 45 ms
+    transform: scale(0.2); // sa taille est à 20% de sa totalité
     color: transparent;
     background: $heart;
     background-clip: text;
-    -webkit-background-clip: text;  // ce qui permet de mettre la couleur dans le coeur sans que ça dépasse du conteneur
+    -webkit-background-clip: text; // ce qui permet de mettre la couleur dans le coeur sans que ça dépasse du conteneur
     position: absolute;
     -webkit-transition: all 0.25s;
     -moz-transition: all 0.25s;
@@ -267,14 +277,14 @@ h2 {
   width: 100vw;
   z-index: 1;
   background-color: $white;
-  animation: loader-container 1.5s ease;  // appel l'animation "loader-container", durée: 1.5s, type d'animation: douce
+  animation: loader-container 1.5s ease; // appel l'animation "loader-container", durée: 1.5s, type d'animation: douce
   -webkit-animation: loader-container 1.5s ease;
   animation-duration: 2.8s; // détermine la longeur de l'événement
 }
 
 @keyframes loader-container {
   0% {
-    height: 100vh;  // taille au déclenchement de l'événement
+    height: 100vh; // taille au déclenchement de l'événement
   }
 
   90% {
@@ -282,7 +292,7 @@ h2 {
   }
 
   100% {
-    height: 0vh;  // taille à la fin de l'événement
+    height: 0vh; // taille à la fin de l'événement
   }
 }
 
@@ -295,12 +305,12 @@ h2 {
   span {
     font-size: 0vh; // taille de chaque lettre hors événement
     animation: letter;
-    -webkit-animation: letter 1.5s ease;  //  déclenche le keyframe letter, dure 1.5s et assigne le type d'animation
+    -webkit-animation: letter 1.5s ease; //  déclenche le keyframe letter, dure 1.5s et assigne le type d'animation
   }
 }
 
 h1 span:nth-child(1) {
-  animation-delay: 0.1s;  // temps d'attente entre chaque apparition de lettre
+  animation-delay: 0.1s; // temps d'attente entre chaque apparition de lettre
 }
 h1 span:nth-child(2) {
   animation-delay: 0.2s;
@@ -343,12 +353,12 @@ h1 span:nth-child(8) {
   0% {
     opacity: 0;
     //  le plat est transparent au début de l'événement
-    //  position au début de l'événement à 20px plus bas 
+    //  position au début de l'événement à 20px plus bas
     -moz-transform: translateY(+20px);
     -ms-transform: translateY(+20px);
     -o-transform: translateY(+20px);
     -webkit-transform: translateY(+20px);
-}
+  }
 
   100% {
     opacity: 1; // le plat est visible à la fin de l'événement
@@ -373,7 +383,9 @@ h1 span:nth-child(8) {
 @keyframes dish-title-animation {
   0% {
     opacity: 0;
-    transform: translateX(-300px); // position de l'élément au déclenchement de l'animation
+    transform: translateX(
+      -300px
+    ); // position de l'élément au déclenchement de l'animation
     -webkit-transform: translateX(-300px);
     -moz-transform: translateX(-300px);
     -ms-transform: translateX(-300px);
@@ -390,6 +402,20 @@ h1 span:nth-child(8) {
 }
 
 // Animations ----------------------------------------------------------------------------------
+
+//                 ---------------------------------- LG Desktop -------------------------------
+
+@media only screen and (min-width: 1441px) and (max-width: 2560px) {
+  .dish {
+    &:hover {
+      .price {
+        margin-right: 7rem !important;
+      }
+    }
+  }
+}
+
+//                 ---------------------------------- LG Desktop -------------------------------
 
 //                 --------------------------------- DESKTOP --------------------------------
 
@@ -470,7 +496,7 @@ h1 span:nth-child(8) {
     }
     &:hover {
       .price {
-        margin-right: 3rem !important;
+        margin-right: 3rem;
         transition: 0.13s;
         -webkit-transition: 0.13s;
         -moz-transition: 0.13s;
@@ -657,7 +683,8 @@ h1 span:nth-child(8) {
   }
 
   article {
-    max-width: 35vw;
+    // max-width: 35vw;
+    width: 40vw;
     background-color: #ffffff;
     margin: 2rem 0;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -670,6 +697,9 @@ h1 span:nth-child(8) {
       -moz-border-radius: 15px 15px 0 0;
       -ms-border-radius: 15px 15px 0 0;
       -o-border-radius: 15px 15px 0 0;
+      //  width: 100%;
+      // height: 30vh;
+      object-fit: cover;
     }
     .restaurant-title {
       font-weight: 600;
@@ -681,13 +711,18 @@ h1 span:nth-child(8) {
     p {
       padding-left: 0.5rem;
     }
+    #second-img {
+      // height: 40vh;
+      max-height: 30vh;
+      object-fit: cover;
+    }
   }
 
-  .second-img {
-    height: 343px;
-    width: 514px;
-    object-fit: cover;
-  }
+  // .second-img {
+  //   height: 343px;
+  //   width: 514px;
+  //   object-fit: cover;
+  // }
 
   footer {
     background-color: #353535;
@@ -709,19 +744,19 @@ h1 span:nth-child(8) {
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  .second-img {
-    width: 504px;
-  }
+  // .second-img {
+  //   width: 504px;
+  // }
 }
 
 //                ---------------------------------- Fin DESKTOP ---------------------------------
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .second-img {
-    width: 358px;
-    height: 239px;
-    object-fit: cover;
-  }
+  // .second-img {
+  //   width: 358px;
+  //   height: 239px;
+  //   object-fit: cover;
+  // }
   .arrow {
     position: absolute;
     left: 5%;
